@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css?family=Quattrocento:wght@700|Quattrocento+Sans:wght@300');
+
+/*
+
+https://coolors.co/9689f6-533a7b-4b244a-25171a-bcd979
+9689f6 Purple
+533A7B Grape
+4B244A Red Purple Ish
+25171A Dark Brown / Purple
+BCD979 Greenish
+
+*/
+
+/* GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background-color: #533A7B;
+    font-family: "Quattrocento Sans", sans-serif;
+    color: #997cdf;
+}
+
+/* HEADER */
+
+header {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0px;
+}
+
+#artist, header h2 {
+    font-family: Quattrocento, sans-serif;
+}
+
+#artist {
+    font-size: 200%;
+    line-height: 50px;
+    margin-left: 30px;
+    letter-spacing: 6px;
+}
+
+#artist a {
+    text-decoration: none;
+    color: #997cdf;
+}
+
+#subtitle {
+    background-color: rgba(37,23,26,0.5);
+    line-height: 30px;
+    display: block;
+    height: 30px;
+    margin-top: -30px;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+header h2 {
+    font-size: 100%;
+    padding-left: 30px;
+}
+
+/* NAVIGATION */
+
+nav {
+    margin-top: 200px;
+    top: 100px;
+    background-color: rgba(37,23,26,0.75);
+    height: 50px;
+}
+
+header h1, header h2 {
+    float: left;
+}
+
+#menu {
+    font-size: 200%;
+    height: 100%;
+    float: right;
+
+}
+
+#menu li {
+    list-style-type: none;
+    float: left;
+    margin-right: 40px;
+}
+
+#menu a {
+    text-decoration: none;
+    color: #9689F6;
+}
+
+#menu a:hover {
+    color: #BCD979; /* d2c5f1 */
+    font-weight: bold;
+}
+
+#menu a.active {
+    color: #BCD979;
+    font-weight: bold;
+}
+
+#menu li, #logo {
+    line-height: 50px;
+}
+
+/* CONTENT */
+
+#elephants {
+    margin-top: 100px;
+    height: 2600px;
+    background-image: url('/assets/images/pexels-aenic-visuals-3551498.jpg');
+    background-size: cover;
+    margin-bottom: 100px;
+}
+
+/* FOOTER */
+
+footer {
+    position: sticky;
+    bottom: 0px;
+    background-color: rgba(37,23,26,0.75);
+}
+
+.socials{
+    text-align: center;
+}
+
+.socials li{
+    display: inline;
+}
+
+.socials i{
+    font-size: 160%;
+    padding: 1%;
+    color: #9689F6;
+}
+
+.socials i:hover {
+    color: #BCD979;
+}
+
+/* < 800 px */
+@media screen and (max-width: 800px){
+    #menu {
+        font-size: 1.2em;
+        height: 100%;
+        float: right;
+    
+    }
+}
