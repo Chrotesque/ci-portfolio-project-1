@@ -1,15 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:wght@700|Cardo:wght@300');
 
-/*
-
-9689f6 Purple
-533A7B Grape
-4B244A Red Purple Ish
-25171A Dark Brown / Purple
-BCD979 Greenish
-
-*/
-
 /* GENERAL */
 
 * {
@@ -19,7 +9,7 @@ BCD979 Greenish
 }
 
 body {
-    background-color: #533A7B;
+    background-color: #43405C;
     font-family: "Josefin Sans", sans-serif;
     color: #997cdf;
     height: 100%;
@@ -28,32 +18,33 @@ body {
 /* HEADER */
 
 header {
-    background-color: #25171A;
-    height: 80px;
     position: absolute;
+    background-color: #25171A;
     width: 100%;
 }
 
-#artist, header h2 {
+#artist-small {
+    display: none;
+}
+
+#artist-big {
+    display: initial;
+}
+
+#artist-big, #artist-small, header h2 {
     font-family: Cardo, sans-serif;
     text-transform: uppercase;
 }
-
-#artist {
+#artist-big, #artist-small {
     font-size: 200%;
-    line-height: 80px;
-    margin-left: 30px;
+    margin-left: 20px;
+    line-height: 55px;
     letter-spacing: 6px;
-    z-index: 2;
 }
 
-#artist a {
+#artist-big a, #artist-small a {
     text-decoration: none;
     color: #997cdf;
-}
-
-#subtitle {
-    display: none;
 }
 
 header h2 {
@@ -61,9 +52,7 @@ header h2 {
     padding-left: 30px;
 }
 
-header h1, header h2 {
-    float: left;
-}
+
 
 /* NAVIGATION */
 
@@ -80,9 +69,16 @@ nav {
 }
 
 /* NAVIGATION > MOBILE */
+
 #checkbox-toggle {
     opacity: 0;
   }
+  #toggle-button i.fa-times {
+    display: none;
+}
+#toggle-button i.fa-bars {
+    display: initial;
+}
   #checkbox-toggle:checked ~ #left-socials {
     left: 0 !important;
   }
@@ -90,14 +86,19 @@ nav {
     right: 0 !important;
   }
   #checkbox-toggle:checked ~   #toggle-button i {
-        background: rgba(37,23,26,0);
+        background: none;
   }
+  #checkbox-toggle:checked ~ #toggle-button i.fa-bars {
+    display: none;
+}
+#checkbox-toggle:checked ~ #toggle-button i.fa-times {
+    display: initial;
+    margin-right: 8px;
+}
   #toggle-button {
     position: absolute;
-    top: 15px;
-    right: 30px;
-    width: 26px;
-    height: 26px;
+    top: 8px;
+    right: 10px;
     cursor: pointer;
     z-index: 1;
   }
@@ -107,12 +108,20 @@ nav {
       height: 100%;
   }
 
-  #toggle-button i {
-      font-size: 2em;
-      border-radius: 15%;
-      border: solid 10px transparent;
-      background: rgba(37,23,26,0.85);
-  }
+  #toggle-button i.fa-bars {
+    font-size: 2em;
+    display: block;
+  background: rgba(37,23,26,0.85);
+  width: 39px;
+  line-height: 38px;
+  text-align: center;
+}
+
+#toggle-button i.fa-times {
+    font-size: 2em;
+  line-height: 38px;
+  text-align: center;
+}
 
   #left-socials, #right-nav {
     position: fixed;
@@ -156,8 +165,8 @@ nav {
   #right-nav ul li {
     list-style: none;
     text-align: center;
-      font-size: 6vmin;
-      line-height: 4em;
+    font-size: 6vmin;
+    line-height: 3em;
   }
 
   #right-nav ul li a {
@@ -175,43 +184,80 @@ nav {
 
 /* CONTENT */
 
-#elephants {
-    margin-top: 100px;
-    height: 2600px;
-    background-image: url('/assets/images/pexels-aenic-visuals-3551498.jpg');
-    background-size: cover;
-    margin-bottom: 100px;
+section {
+    padding-top: 60px;
 }
 
-/* FOOTER */
+/* CONTENT > HOME */
 
-footer {
-    position: sticky;
-    bottom: 0px;
+/* CONTENT > PORTFOLIO */
+
+#gallery article:not(:last-child) {
+    margin-bottom: 15px;
 }
 
-.socials {
-    text-align: center;
-    opacity: 0;
-}
-
-.socials li {
-    display: inline;
-    margin: 3%;
-}
-
-
-.socials i{
+#gallery h2{
     font-size: 2em;
+    margin-left: 20px;
+    width: 90%;
+    color: #C8C5E3;
+    text-transform: uppercase;
+}
+
+#gallery p {
+    font-size: 1.5em;
+    padding-bottom: 10px;
+    margin-left: 20px;
+    width: 90%;  
     color: #9689F6;
 }
 
-.socials i:hover {
-    color: #BCD979;
+.images {
+    line-height: 0;
+    column-count: 2;
+    column-gap: 0px;
 }
 
-/* screen size above 768px */
+.images img {
+    width: 100%;
+}
+
+/* CONTENT > COMISSIONS */
+
+/* CONTENT > ABOUT */
+
+/* CONTENT > CONTACT */
+
+/* FOOTER */
+footer {
+    display: none;
+}
+
+/* MEDIA QUERIES */
+/* MEDIA QUERIES > PORTFOLIO OPTIMIZATION */
+@media (max-width: 512px) {
+    .images {
+        column-count: 1;
+    }
+}
+
+/* MEDIA QUERIES > ARTIST TITLE OPTIMIZATION */
+@media (max-width: 360px) {
+    #artist-small {
+        display: initial;
+    }
+    #artist-big {
+        display: none;
+    }
+}
+
+/* MEDIA QUERIES > TABLET CHANGES */
 @media (min-width: 769px) {
+
+    /* NAVIGATION > MOBILE */
+    #menu_mobile {
+        display: none;
+    }
 
     /* NAVIGATION > DESKTOP */
     #menu_desktop {
@@ -219,49 +265,50 @@ footer {
         font-size: 2em;
         height: 100%;
         float: right;
-    
     }
     
     #menu_desktop li {
         list-style-type: none;
         float: left;
-        margin-right: 40px;
+        display: block;
     }
     
     #menu_desktop a {
+        display: inline-block;
         text-decoration: none;
         color: #9689F6;
+        height: 100%;
+        width: 250px;
+        text-align: center;
     }
     
     #menu_desktop a:hover {
-        color: #BCD979; /* d2c5f1 */
+        color: #C8C5E3;
+        padding-top: 4px;
+        background-color: #555080;
         font-weight: bold;
     }
     
     #menu_desktop a.active {
-        color: #BCD979;
+        color: #C8C5E3;
+        background-color: #43405C;
         font-weight: bold;
     }
     
-    #menu_desktop li, #logo {
-        line-height: 50px;
+    #menu_desktop li {
+        line-height: 60px;
     }
 
-    /* NAVIGATION > MOBILE */
-    #menu_mobile {
-        opacity: 0;
+    /* CONTENT */
+    section {
+        padding-top: 80px;
     }
 
-    #subtitle {
-        opacity: 1;
-        background-color: rgba(37,23,26,0.5);
-        line-height: 30px;
-        display: block;
-        height: 30px;
-        margin-top: -30px;
-        position: absolute;
-        width: 100%;
-        display: block;
-    }
+}
 
+/* MEDIA QUERIES > DESKTOP CHANGES */
+@media (min-width: 1024px) {
+    .images {
+        column-count: 3;
+    }
 }
