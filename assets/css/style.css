@@ -13,6 +13,7 @@ body {
     font-family: "Josefin Sans", sans-serif;
     color: #997cdf;
     height: 100%;
+    font-size: 1em;
 }
 
 /* HEADER */
@@ -36,7 +37,7 @@ header {
     text-transform: uppercase;
 }
 #artist-big, #artist-small {
-    font-size: 200%;
+    font-size: 2em;
     margin-left: 20px;
     line-height: 55px;
     letter-spacing: 6px;
@@ -55,21 +56,19 @@ header {
     top: 0px;
 }
 
-/* NAVIGATION > DESKTOP */
-
+/* NAVIGATION > TABLET AND DESKTOP */
 #menu_desktop {
     display: none;
 }
 
 /* NAVIGATION > MOBILE */
-
 #checkbox-toggle {
     opacity: 0;
   }
-  #toggle-button i.fa-times {
+  #toggle-button i.fa-times { /* cross icon */
     display: none;
 }
-#toggle-button i.fa-bars {
+#toggle-button i.fa-bars { /* hamburger icon */
     display: initial;
 }
   #checkbox-toggle:checked ~ #left-socials {
@@ -101,7 +100,7 @@ header {
       height: 100%;
   }
 
-  #toggle-button i.fa-bars {
+  #toggle-button i.fa-bars { /* hamburger */
     font-size: 2em;
     display: block;
   background: rgba(37,23,26,0.85);
@@ -110,7 +109,7 @@ header {
   text-align: center;
 }
 
-#toggle-button i.fa-times {
+#toggle-button i.fa-times { /* cross */
     font-size: 2em;
   line-height: 38px;
   text-align: center;
@@ -176,9 +175,9 @@ header {
 }
 
 /* CONTENT */
-
+/* CONTENT > GENERAL */
 section {
-    padding-top: 60px;
+    margin: 60px 3vw 8vh 3vw;
 }
 
 /* CONTENT > HOME */
@@ -198,7 +197,7 @@ section {
 }
 
 #gallery p {
-    font-size: 1.5em;
+    font-size: 1em;
     padding-bottom: 10px;
     margin-left: 20px;
     width: 90%;  
@@ -228,31 +227,9 @@ section {
 /* CONTENT > ABOUT */
 
 /* CONTENT > CONTACT */
-#contact-socials {
-    display: none;
-}
-
-section#contact {
-    margin: 0 20px 30px 20px;
-}
-
 #contact > p {
     margin-bottom: 20px;
 }
-
-fieldset {
-    border: 2px solid #25171A;
-    padding: 20px 40px 20px 20px;
-    background-color: rgba(255,255,255,0.1);
-  }
-  
-  legend {
-    text-align: center;
-    padding: 10px;
-    color: #C8C5E3;
-    font-size: 1.5em;
-    background-color: #25171A;
-  }
 
 #contact label {
     font-size: 1.5em;
@@ -266,14 +243,23 @@ fieldset {
     background-color: #25171A;
     padding: 10px;
     color: #C8C5E3;
-    margin: 0 0 15px 0;
+    box-sizing: border-box;
 }
 
-
-
-form p {
-    vertical-align: top;
+#contact input:not(:last-child), #contact textarea {
+    margin-bottom: 20px;
 }
+
+#contact textarea {
+    resize:vertical;
+    height: 5em;
+}
+
+#contact input.submit {
+    background-color: #C8C5E3;
+    color: #25171A;
+}
+
 
 /* FOOTER */
 footer {
@@ -295,7 +281,7 @@ footer {
 }
 
 /* MEDIA QUERIES > ARTIST TITLE OPTIMIZATION */
-@media (max-width: 360px) {
+@media (max-width: 359px) {
     #artist-small {
         display: initial;
     }
