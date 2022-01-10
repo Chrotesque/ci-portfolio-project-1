@@ -29,6 +29,7 @@ header {
 
 #artist-big {
     display: initial;
+    color: #C8C5E3;
 }
 
 #artist-big, #artist-small {
@@ -44,7 +45,7 @@ header {
 
 #artist-big a, #artist-small a {
     text-decoration: none;
-    color: #997cdf;
+    color: #C8C5E3; /* #997cdf; */
 }
 
 /* NAVIGATION */
@@ -53,6 +54,7 @@ header {
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0px;
+    z-index: 1;
 }
 
 /* NAVIGATION > TABLET AND DESKTOP */
@@ -69,6 +71,7 @@ header {
 }
 #toggle-button i.fa-bars { /* hamburger icon */
     display: initial;
+    color: #C8C5E3;
 }
   #checkbox-toggle:checked ~ #left-socials {
     left: 0 !important;
@@ -76,15 +79,15 @@ header {
   #checkbox-toggle:checked ~ #right-nav {
     right: 0 !important;
   }
-  #checkbox-toggle:checked ~   #toggle-button i {
-        background: none;
-  }
+
   #checkbox-toggle:checked ~ #toggle-button i.fa-bars {
     display: none;
 }
 #checkbox-toggle:checked ~ #toggle-button i.fa-times {
     display: initial;
+    background: none;
     margin-right: 8px;
+    color: #C8C5E3;
 }
   #toggle-button {
     position: absolute;
@@ -93,10 +96,6 @@ header {
     cursor: pointer;
     z-index: 1;
   }
-  /*    Z-INDEX:
-        -1 : section content
-         0 : sticky headers
-         1 : hamburger menu     */
 
   #menu_mobile {
       width: 100%;
@@ -182,7 +181,6 @@ header {
 section {
     margin: 60px 3vw 0 3vw;
     position: relative;
-    z-index: -1;
 }
 
 a.link {
@@ -235,26 +233,68 @@ a.link {
 /* CONTENT > COMISSIONS */
 .comission-segment {
     display: block;
-    height: 400px;
     margin-bottom: 10px;
     position: relative;
 }
 
-#comissions p {
-    margin-bottom: 10px;
+#comissions p, #comissions ol {
+    margin-bottom: 15px;
+}
+.comission-segment i {
+    display: block;
+    margin-bottom: 25px;
+}
+#comissions ol li {
+    margin-bottom: 5px;
 }
 
-.comission-segment div {
+.comission-segment div:nth-child(1) {
     position: sticky;
     top: 8px;
     background-color: #25171A;
+    border-bottom: 4px solid #997cdf;
     padding: 10px;
-    font-size: 1.125em;
-    z-index: 0;
+    font-size: 1.125em; /* to almost perfectly align with the sticky hamburger menu */
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
-.comission-segment div p {
-    padding-left: 20px;
+.comission-segment ol {
+    padding-left: 25px;
+}
+.comission-segment p {
+    padding-left: 10px;
+}
+
+.table {
+padding-left: 10px;
+padding-right: 10px;
+}
+.table-left, .table-right {
+    box-sizing: content-box;
+    list-style-type: none;
+    display: inline-block;
+    background-color: rgba(37,23,26,0.5);
+}.table-left {
+    width: 55%;
+}
+.table-right {
+    width: 43%;
+}
+.table ul li {
+    text-align: center;
+    padding-bottom: 5px;
+}
+.table ul li:nth-child(1) {
+    font-weight: bold;
+    font-size: 1.1em;
+    padding-top: 10px;
+}
+.table-right {
+    margin-bottom: 10px;
+}
+.table ul li i {
+    position: static;
 }
 
 /* CONTENT > ABOUT */
