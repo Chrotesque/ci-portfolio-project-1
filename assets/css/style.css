@@ -231,24 +231,23 @@ a.link {
 }
 
 /* CONTENT > COMISSIONS */
-.comission-segment {
+.comissions-segment {
     display: block;
     margin-bottom: 10px;
-    position: relative;
 }
 
-#comissions p, #comissions ol {
+#comissions p:not(p.ignore) {
     margin-bottom: 15px;
 }
-.comission-segment i {
+
+.comissions-segment i {
     display: block;
-    margin-bottom: 25px;
 }
 #comissions ol li {
     margin-bottom: 5px;
 }
 
-.comission-segment div:nth-child(1) {
+.header {
     position: sticky;
     top: 8px;
     background-color: #25171A;
@@ -259,13 +258,32 @@ a.link {
     font-weight: bold;
 }
 
-.comission-segment ol {
+.comissions-segment ol {
     padding-left: 25px;
 }
-.comission-segment p {
+.comissions-segment p {
     padding-left: 10px;
 }
+.table {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 5px;
+}
+.table strong {
+    font-size: 1.1em;
+}
+.table ul {
+    list-style-type: none;
+}
 
+.table ul li {
+    padding: 5px;
+}
+
+.table ul li:nth-child(odd) {
+    background-color: rgba(37,23,26,0.35);
+}
+/*
 .table {
 padding-left: 10px;
 padding-right: 10px;
@@ -296,7 +314,7 @@ padding-right: 10px;
 .table ul li i {
     position: static;
 }
-
+*/
 /* CONTENT > ABOUT */
 section#about {
     float: left;
