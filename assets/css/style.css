@@ -178,7 +178,7 @@ header {
 
 /* CONTENT */
 /* CONTENT > GENERAL */
-section {
+main {
     margin: 60px 3vw 0 3vw;
     position: relative;
 }
@@ -186,6 +186,10 @@ section {
 a.link {
     text-decoration: none;
     color: #C8C5E3;
+}
+
+i.fa-external-link-alt {
+    font-size: 0.75em;
 }
 
 /* CONTENT > HOME */
@@ -231,7 +235,7 @@ a.link {
 }
 
 /* CONTENT > COMISSIONS */
-.comissions-segment {
+#comissions section {
     display: block;
     margin-bottom: 10px;
 }
@@ -240,14 +244,14 @@ a.link {
     margin-bottom: 15px;
 }
 
-.comissions-segment i {
+#comissions section i {
     display: block;
 }
 #comissions ol li {
     margin-bottom: 5px;
 }
 
-.header {
+#comissions h2 {
     position: sticky;
     top: 8px;
     background-color: #25171A;
@@ -258,10 +262,10 @@ a.link {
     font-weight: bold;
 }
 
-.comissions-segment ol {
+#comissions section ol {
     padding-left: 25px;
 }
-.comissions-segment p {
+#comissions section p {
     padding-left: 10px;
 }
 .table {
@@ -467,7 +471,7 @@ footer {
     }
 
     /* CONTENT */
-    section {
+    main {
         padding-top: 45px;
         padding: 45px 0 20px 20px;
     }
