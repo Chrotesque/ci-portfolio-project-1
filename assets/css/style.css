@@ -54,7 +54,7 @@ header {
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0px;
-    z-index: 1;
+    z-index: 10;
 }
 
 /* NAVIGATION > TABLET AND DESKTOP */
@@ -92,9 +92,9 @@ header {
   #toggle-button {
     position: absolute;
     top: 8px;
-    right: 10px;
+    right: 11px;
     cursor: pointer;
-    z-index: 1;
+    z-index: 1; /* required to make it able to interact upon opening hamburger menu */
   }
 
   #menu_mobile {
@@ -196,6 +196,7 @@ i.fa-external-link-alt {
 
 /* CONTENT > PORTFOLIO */
 
+/*
 #gallery article:not(:last-child) {
     margin-bottom: 15px;
 }
@@ -207,50 +208,103 @@ i.fa-external-link-alt {
     color: #C8C5E3;
     text-transform: uppercase;
 }
+*/
 
-#gallery p {
-    font-size: 1em;
-    padding-bottom: 10px;
-    margin-left: 20px;
-    width: 90%;  
-    color: #9689F6;
+#gallery h2 {
+    position: sticky;
+    top: 8px;
+    background-color: #25171A;
+    border-bottom: 4px solid #997cdf;
+    padding: 10px;
+    font-size: 1.125em; /* to almost perfectly align with the sticky hamburger menu */
+    font-weight: bold;
+    z-index: 1;
 }
 
-.images {
-    line-height: 0;
-    column-count: 2;
+#gallery section:not(:first-child) {
+    margin-top: 50px;
+}
+
+#gallery h2+p {
+    font-size: 1em;
+    padding: 10px;
+    color: #25171A;
+    background-color: #997cdf;
+}
+
+.images div, .images-small div {
+    position: relative;
+}
+
+.img-desc {
+    color: #997cdf;
+    background-color: rgba(37,23,26,0.85);
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin-bottom: 4px;
+    font-size: 1em;
+    text-align: center;
+}
+
+.images, .images-small { 
     column-gap: 0px;
 }
-
-.small {
-    column-count: 4;
+.images {
+    column-count: 2;
+}
+.images-small {
+    column-count: 2;
 }
 
-.small img {
-    padding-bottom: 20px; /* most stickers dont reach their full width but do their height */
+.images-small img {
+    padding: 10px 0 10px; /* most stickers dont reach their full width but do their height */
 }
 
-.images img {
+img.img-small {
     width: 100%;
 }
 
+.images img.img-small {
+    background-color: #696490;
+}
+
+span.img-big {
+    z-index: 999999;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.9);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0s, opacity 0.15s linear;
+  }
+  
+  span.img-big img {
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    max-height: 100%;
+    max-width: 100%;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  img.img-small:focus + span.img-big {
+    visibility: visible;
+    opacity: 1;
+  }
+  
 /* CONTENT > COMISSIONS */
-#comissions section {
-    display: block;
-    margin-bottom: 10px;
+#comissions section:not(:last-of-type) {
+    margin-bottom: 40px;
 }
-
-#comissions p:not(p.ignore) {
-    margin-bottom: 15px;
-}
-
-#comissions section i {
-    display: block;
-}
-#comissions ol li {
-    margin-bottom: 5px;
-}
-
 #comissions h2 {
     position: sticky;
     top: 8px;
@@ -263,15 +317,20 @@ i.fa-external-link-alt {
 }
 
 #comissions section ol {
-    padding-left: 25px;
+    list-style-position: inside;
+    padding-left: 5px;
 }
-#comissions section p {
-    padding-left: 10px;
+#comissions ol li {
+    margin-bottom: 10px;
+} 
+
+#comissions p:not(p.ignore) {
+    margin-bottom: 15px;
 }
+
 .table {
     display: grid;
     grid-template-columns: auto auto;
-    padding: 5px;
 }
 .table strong {
     font-size: 1.1em;
@@ -279,46 +338,23 @@ i.fa-external-link-alt {
 .table ul {
     list-style-type: none;
 }
-
 .table ul li {
     padding: 5px;
 }
-
 .table ul li:nth-child(odd) {
     background-color: rgba(37,23,26,0.35);
 }
-/*
-.table {
-padding-left: 10px;
-padding-right: 10px;
+#comissions p.ignore {
+    margin-left: 10px;
 }
-.table-left, .table-right {
-    box-sizing: content-box;
-    list-style-type: none;
-    display: inline-block;
-    background-color: rgba(37,23,26,0.5);
-}.table-left {
-    width: 55%;
+
+#comissions section:last-of-type p {
+    letter-spacing: 0.5px;
 }
-.table-right {
-    width: 43%;
+#comissions section i {
+    display: block;
 }
-.table ul li {
-    text-align: center;
-    padding-bottom: 5px;
-}
-.table ul li:nth-child(1) {
-    font-weight: bold;
-    font-size: 1.1em;
-    padding-top: 10px;
-}
-.table-right {
-    margin-bottom: 10px;
-}
-.table ul li i {
-    position: static;
-}
-*/
+
 /* CONTENT > ABOUT */
 section#about {
     float: left;
@@ -401,6 +437,11 @@ footer {
 
 /* MEDIA QUERIES > TABLET CHANGES */
 @media (min-width: 769px) {
+
+    /* fix me */
+    img.img-small, span.img-big {
+        cursor: hand;
+      }
 
     header {
         position: sticky;
