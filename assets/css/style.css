@@ -197,11 +197,11 @@ i.fa-external-link-alt {
 /* CONTENT > PORTFOLIO */
 
 /*
-#gallery article:not(:last-child) {
+main#gallery article:not(:last-child) {
     margin-bottom: 15px;
 }
 
-#gallery h2{
+main#gallery h2{
     font-size: 2em;
     margin-left: 20px;
     width: 90%;
@@ -210,7 +210,7 @@ i.fa-external-link-alt {
 }
 */
 
-#gallery h2 {
+main#gallery h2 {
     position: sticky;
     top: 8px;
     background-color: #25171A;
@@ -221,11 +221,11 @@ i.fa-external-link-alt {
     z-index: 1;
 }
 
-#gallery section:not(:first-child) {
+main#gallery section:not(:first-child) {
     margin-top: 50px;
 }
 
-#gallery h2+p {
+main#gallery h2+p {
     font-size: 1em;
     padding: 10px;
     color: #25171A;
@@ -356,11 +356,11 @@ span.lightbox {
 }
 
 /* CONTENT > ABOUT */
-section#about {
+main#about {
     float: left;
 }
 
-section#about p:not(:last-child) {
+main#about p:not(:last-child) {
     margin-bottom: 20px;
 }
 
@@ -372,15 +372,15 @@ section#about p:not(:last-child) {
 }
 
 /* CONTENT > CONTACT */
-#contact p {
+main#contact p {
     margin-bottom: 20px;
 }
 
-#contact label {
+main#contact label {
     font-size: 1.5em;
 }
 
-#contact input, #contact textarea {
+main#contact input, main#contact textarea {
     font-family: "Josefin Sans", sans-serif;
     font-size: 1.5em;
     width: 100%;
@@ -391,16 +391,16 @@ section#about p:not(:last-child) {
     box-sizing: border-box;
 }
 
-#contact input:not(:last-child), #contact textarea {
+main#contact input:not(:last-child), main#contact textarea {
     margin-bottom: 20px;
 }
 
-#contact textarea {
+main#contact textarea {
     resize:vertical;
     height: 5em;
 }
 
-#contact input.submit {
+main#contact input.submit {
     background-color: #C8C5E3;
     color: #25171A;
 }
@@ -519,15 +519,15 @@ footer {
 
     /* CONTENT > PORTFOLIO */
 
-    #gallery h2{
+    main#gallery h2{
         font-size: 3em;
     }
     
-    #gallery p {
+    main#gallery p {
         font-size: 2em;
     }
 
-    #gallery article:not(:last-child) {
+    main#gallery article:not(:last-child) {
         margin-bottom: 50px;
     }
 
@@ -538,16 +538,16 @@ footer {
         grid-column-gap: 100px;
     }
 
-    #contact-socials {
+    main#contact-socials {
         display: flex;
         justify-content: left;
         align-items: center;
     }
-    #contact-socials li {
+    main#contact-socials li {
         list-style-type: none;
     }
 
-    #contact-form, #contact-socials {
+    main#contact-form, main#contact-socials {
         float: left;
         width: 20%;
     }
