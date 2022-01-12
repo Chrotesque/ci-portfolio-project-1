@@ -232,7 +232,7 @@ i.fa-external-link-alt {
     background-color: #997cdf;
 }
 
-.images div, .images-small div {
+.section-images div, .section-images-small div {
     position: relative;
 }
 
@@ -249,29 +249,29 @@ i.fa-external-link-alt {
     text-align: center;
 }
 
-.images, .images-small { 
+.section-images, .section-images-small { 
     column-gap: 0px;
 }
-.images {
+.section-images {
     column-count: 2;
 }
-.images-small {
+.section-images-small {
     column-count: 2;
 }
 
-.images-small img {
+.section-images-small img {
     padding: 10px 0 10px; /* most stickers dont reach their full width but do their height */
 }
 
-img.img-small {
+img.thumbnail {
     width: 100%;
 }
 
-.images img.img-small {
+.section-images img.thumbnail {
     background-color: #696490;
 }
 
-span.img-big {
+span.lightbox {
     z-index: 999999;
     position: fixed;
     height: 100%;
@@ -284,7 +284,7 @@ span.img-big {
     transition: visibility 0s, opacity 0.15s linear;
   }
   
-  span.img-big img {
+  span.lightbox img {
     position: fixed;
     margin: 0;
     padding: 0;
@@ -296,7 +296,7 @@ span.img-big {
     transform: translate(-50%, -50%);
   }
   
-  img.img-small:focus + span.img-big {
+  img.thumbnail:focus + span.lightbox {
     visibility: visible;
     opacity: 1;
   }
@@ -415,7 +415,7 @@ footer {
 /* MEDIA QUERIES */
 /* MEDIA QUERIES > PORTFOLIO OPTIMIZATION */
 @media (max-width: 512px) {
-    .images {
+    .section-images {
         column-count: 1;
     }
 
@@ -439,7 +439,7 @@ footer {
 @media (min-width: 769px) {
 
     /* fix me */
-    img.img-small, span.img-big {
+    img.thumbnail, span.lightbox {
         cursor: hand;
       }
 
@@ -587,7 +587,7 @@ footer {
 
 /* MEDIA QUERIES > SMALL DESKTOP / BIG TABLET CHANGES */
 @media (min-width: 1024px) {
-    .images {
+    .section-images {
         column-count: 3;
     }
 
@@ -599,7 +599,7 @@ footer {
 
 /* MEDIA QUERIES > BIG SCREEN CHANGES */
 @media (min-width: 1680px) {
-    .images {
+    .section-images {
         column-count: 4;
     }
     .small {
