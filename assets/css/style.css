@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:wght@700|Cardo:wght@300');
+@import url('https://fonts.googleapis.com/css2?family=Cardo&family=Josefin+Sans:wght@700&display=swap');
 
 /* GENERAL */
 * {
@@ -8,11 +8,20 @@
 }
 
 body {
-    background-color: #43405C;
+    color: #B39CE7;
+    background-color: #432f4e;
     font-family: "Josefin Sans", sans-serif;
-    color: #997cdf;
     height: 100%;
     font-size: 1em;
+}
+
+html, body {
+    min-height: 100%;
+}
+
+/* COLORS */
+.clr-link {
+    color: 
 }
 
 /* HEADER */
@@ -64,7 +73,7 @@ header {
 
 /* NAVIGATION > MOBILE */
 #checkbox-toggle {
-    opacity: 0;
+    visibility: hidden;
   }
   #toggle-button i.fa-times { /* cross icon */
     display: none;
@@ -142,7 +151,7 @@ header {
   }
 
 #left-socials ul li a, #right-nav ul li a {
-    color: #9689F6;
+    color: #C8C5E3;
     text-decoration: none;
     display: block;
 }
@@ -165,27 +174,31 @@ header {
 
   #right-nav ul li a {
     width: 70vw; /* block + width extend clickable range */
-    background-color: rgba(255,255,255,0.1);
+    background-color: rgba(200,197,227,0.2);
     margin-top: 10px;
     margin-bottom: 10px;
   }
 
 #right-nav ul li a.active {
-    color: #C8C5E3;
-    background-color: #555080;
+    color: #161429;
+    background-color: #B3BF49;
     font-weight: bold;
 }
 
 /* CONTENT */
 /* CONTENT > GENERAL */
-main {
+main#gallery, main#comissions, main#about, main#contact {
     margin: 60px 3vw 0 3vw;
     position: relative;
 }
 
+main#home {
+    margin: 36px 0 50px 0;
+}
+
 a.link {
     text-decoration: none;
-    color: #C8C5E3;
+    color: #CEE002;
 }
 
 i.fa-external-link-alt {
@@ -193,6 +206,113 @@ i.fa-external-link-alt {
 }
 
 /* CONTENT > HOME */
+
+main#home section {
+    height: 600px;
+    width: 100%;
+    position: relative;
+}
+
+.fa-chevron-down {
+    position: absolute;
+    text-shadow: 0 0 2px #000, 0 0 10px #000, 0 0 30px #000;
+    font-size: 3em;
+    top: 93%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    color: #C8C5E3;
+}
+
+#hero-image {
+    background-image: url("../images/carousel/collage_posters.jpg");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 500%;
+    height: 100%;
+  }
+
+#hero-text {
+    text-align: center;
+    margin: 20px 3vw 0 3vw;
+}
+
+main#home h2 {
+    font-size: 2em;
+    color: #C8C5E3;
+}
+
+main#home a {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 10px;
+    background-color: #B3BF49;
+    text-decoration: none;
+    color: #25171A;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+main#home p {
+  padding: 10px 0 10px;
+}
+
+#hero-image {
+    animation-name: hero-scroll;
+    animation-duration: 60s;
+    animation-fill-mode: forward;
+    animation-iteration-count: infinite;
+}
+
+@keyframes hero-scroll {
+    0% {
+        background-image: url("../images/carousel/collage_posters.jpg");
+        background-position: left;
+    }
+        12% {
+            background-image: url("../images/carousel/collage_posters.jpg");
+        }
+    16% {
+        background-image: url("../images/carousel/collage_stickers.jpg");
+        background-position: right;
+    }
+        29% {
+            background-image: url("../images/carousel/collage_stickers.jpg");
+        }
+    33% {
+        background-image: url("../images/carousel/collage_paintings.jpg");
+        background-position: left;
+    }
+        46% {
+            background-image: url("../images/carousel/collage_paintings.jpg");
+        }
+    50% {
+        background-image: url("../images/carousel/collage_posters.jpg");
+        background-position: right;
+    }
+        62% {
+            background-image: url("../images/carousel/collage_posters.jpg");
+        }
+    66% {
+        background-image: url("../images/carousel/collage_stickers.jpg");
+        background-position: left;
+    }
+        79% {
+            background-image: url("../images/carousel/collage_stickers.jpg");
+        }
+    83% {
+        background-image: url("../images/carousel/collage_paintings.jpg");
+        background-position: right;
+    }
+        96% {
+            background-image: url("../images/carousel/collage_paintings.jpg");
+        }
+    100% {
+        background-image: url("../images/carousel/collage_posters.jpg");
+        background-position: left;
+    }
+}
+  
 
 /* CONTENT > PORTFOLIO */
 
@@ -225,7 +345,7 @@ main#gallery section:not(:first-child) {
     margin-top: 50px;
 }
 
-main#gallery h2+p {
+.section-desc {
     font-size: 1em;
     padding: 10px;
     color: #25171A;
@@ -237,7 +357,7 @@ main#gallery h2+p {
 }
 
 .img-desc {
-    color: #997cdf;
+    color: #C8C5E3;
     background-color: rgba(37,23,26,0.85);
     padding: 10px;
     position: absolute;
@@ -272,7 +392,7 @@ img.thumbnail {
 }
 
 span.lightbox {
-    z-index: 999999;
+    z-index: 100;
     position: fixed;
     height: 100%;
     width: 100%;
@@ -356,10 +476,6 @@ span.lightbox {
 }
 
 /* CONTENT > ABOUT */
-main#about {
-    float: left;
-}
-
 main#about p:not(:last-child) {
     margin-bottom: 20px;
 }
@@ -403,6 +519,8 @@ main#contact textarea {
 main#contact input.submit {
     background-color: #C8C5E3;
     color: #25171A;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 
