@@ -19,11 +19,6 @@ html, body {
     min-height: 100%;
 }
 
-/* COLORS */
-.clr-link {
-    color: 
-}
-
 /* HEADER */
 
 header {
@@ -188,7 +183,7 @@ header {
 /* CONTENT */
 /* CONTENT > GENERAL */
 main#gallery, main#comissions, main#about, main#contact {
-    margin: 60px 3vw 0 3vw;
+    margin: 60px 3vw 25px 3vw;
     position: relative;
 }
 
