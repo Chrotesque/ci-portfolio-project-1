@@ -1,4 +1,4 @@
-# Milestone Project 1 - Joyce Brok
+# **Milestone Project 1 - Joyce Brok - WIP**
 ## Portfolio Website for a Digital Artist - [View deployed site here.](https://chrotesque.github.io/ci-portfolio-project-1/)
 
 <br>
@@ -7,12 +7,16 @@
 
 1. [Overview](#overview)
 2. [UX](#ux)
+    * [Strategy](#strategy)
+    * [Scope](#scope)
+    * [Structure](#structure)
+    * [Skeleton](#skeleton)
+        * [Wireframes](#wireframes)
+    * [Surface](#surface)
 3. [Features](#features)
     * [Current Features](#current-features)
     * [Future Features](#future-features)
 4. [Technologies Used](#technologies-used)
-    * [Languages](#languages)
-    * [Frameworks](#frameworks)
 5. [Testing](#testing)
 6. [Bugs](#bugs)
 7. [Validation](#validation)
