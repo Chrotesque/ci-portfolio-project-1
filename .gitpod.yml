@@ -1,6 +1,7 @@
 image:
   file: .gitpod.dockerfile
 tasks:
+  - before: printf "\n[settings]\napi_key = $WAKA_TIME_API_KEY\n" > ~/.wakatime.cfg
   - init: . ${GITPOD_REPO_ROOT}/.vscode/init_tasks.sh
     command: /home/gitpod/.pg_ctl/bin/pg_start > /dev/null
   - command: . ${GITPOD_REPO_ROOT}/.vscode/uptime.sh &
@@ -12,3 +13,4 @@ vscode:
     - hookyqr.beautify
     - matt-rudge.auto-open-preview-panel
     - ms-toolsai.jupyter
+    - wakatime.vscode-wakatime
