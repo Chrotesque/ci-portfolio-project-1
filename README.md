@@ -80,7 +80,7 @@ A website meant for the artist as place to showcase her portfolio as well as pro
 <br>
 
 * ## **Skeleton**
-    ### **Navigation***
+    ### **Navigation**
     - separates the contents of the page into logical sections to make it obvious what information will and can be accessed and where
     - all parts of the website are available at all times through the navigation
     - navigation is always at the top of the screen to be always accessible
@@ -170,8 +170,19 @@ A website meant for the artist as place to showcase her portfolio as well as pro
 
 # Bugs ([^](#table-of-contents))
 ### Existing bugs
+  
 ### Resolved bugs
 - At various stages of the project did I forget about file path differences when referring to a file from within the root folder within an html file vs. from within the assets/css folder within the style.css 
+- Chromium-specific: Upon opening the hamburger menu 2 sides slide in from the left (30% wide) and right (70% wide) respectively, occasionally (what felt like 40-50% of the time) there would be a 1px wide gap between the two sides
+    - Workaround:
+        1. initially both sides had 
+            > background-color: rgba(37, 23, 26, 0.95)
+        2. changed that to right side specific and gave left side 
+            > background-color: #25171A
+        3. to mask the gap if it occurs I added to the left side 
+            > border-right: 1px solid #25171A
+        4. without additional changes, having one side partially transparent and one opaque looked odd, added box-shadow to make it work visually
+            > box-shadow: 0 4px 12px rgba(0, 0, 0, 1);
 
 <br>
 
