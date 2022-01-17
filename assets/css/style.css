@@ -147,7 +147,6 @@ header {
     height: 100%;
     margin: auto;
     list-style: none;
-    background-color: rgba(37, 23, 26, 0.95);
     transition-duration: 0.35s;
 }
 
@@ -155,6 +154,9 @@ header {
     left: -100%;
     /* -100% */
     width: 30%;
+    background-color: #25171A;
+    border-right: 1px solid #25171A;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 1);
 }
 
 #left-socials ul li {
@@ -180,6 +182,7 @@ header {
     right: -100%;
     /* -100% */
     width: 70%;
+    background-color: rgba(37, 23, 26, 0.95);
 }
 
 #right-nav ul li {
