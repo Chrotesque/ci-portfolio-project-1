@@ -370,24 +370,63 @@ main#gallery section:not(:first-child) {
     margin-top: 50px;
 }
 
-img.thumbnail {
+.section-desc {
+    font-size: 1em;
+    padding: 10px;
+    color: #25171A;
+    background-color: #997cdf;
+}
+
+.section-images div,
+.section-images-small div {
+    position: relative;
+}
+
+.section-images,
+.section-images-small {
+    column-gap: 0px;
+}
+
+.section-images {
+    column-count: 1;
+}
+
+.section-images-small {
+    column-count: 2;
+    margin: 10px 0 10px 0;
+}
+
+.section-images-small img {
+    padding: 10px 0 10px;
+    /* most stickers dont reach their full width but do their height */
+}
+
+.img-desc {
+    color: #C8C5E3;
+    background-color: rgba(37, 23, 26, 0.85);
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin-bottom: 4px;
+    font-size: 1em;
+    text-align: center;
+}
+
+img.thumbnail,
+.section-images img {
     width: 100% !important;
     height: auto !important;
 }
 
-img.thumbnail {
+.section-images img.thumbnail {
     background-color: #696490;
-    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
 }
 
 .section-images {
-    column-count: 2;
-    column-gap: 1em;
+    column-count: 4;
     width: 100%;
-}
-
-.section-images div {
-    margin-bottom: 0.8em;
 }
 
 span.lightbox {
@@ -395,7 +434,7 @@ span.lightbox {
     position: fixed;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0.9);
     top: 0;
     left: 0;
     opacity: 0;
@@ -403,12 +442,12 @@ span.lightbox {
     transition: visibility 0s, opacity 0.15s linear;
 }
 
-img.full {
+span.lightbox img {
     position: fixed;
     margin: 0;
     padding: 0;
-    max-height: 90%;
-    max-width: 90%;
+    max-height: 100%;
+    max-width: 100%;
     top: 50%;
     left: 50%;
     margin-right: -50%;
@@ -483,8 +522,8 @@ main#about p:not(:last-child) {
 #about-image img {
     width: 100%;
     margin-bottom: 20px;
+    border: 2px dashed rgba(37, 23, 26, 0.25);
     box-sizing: border-box;
-    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
 }
 
 /* CONTENT > CONTACT */
@@ -541,6 +580,17 @@ footer {
 
     #artist-big {
         display: none;
+    }
+}
+
+/* MEDIA QUERIES > PORTFOLIO OPTIMIZATION */
+@media (min-width: 600px) {
+    .section-images {
+        column-count: 2;
+    }
+
+    .section-images-small {
+        column-count: 3;
     }
 }
 
@@ -606,16 +656,6 @@ footer {
         background-position-y: 280px;
     }
 
-    /* CONTENT > PORTFOLIO */
-    .section-images {
-        column-count: 3;
-        column-gap: 2em;
-    }
-
-    .section-images div {
-        margin-bottom: 1.2em;
-    }
-
     /* CONTENT > CONTACT */
     main#contact input:not(:last-child),
     main#contact textarea {
@@ -647,12 +687,12 @@ footer {
 
     /* CONTENT > PORTFOLIO */
     .section-images {
-        column-count: 4;
-        column-gap: 2em;
+        column-count: 3;
     }
 
-    .section-images div {
-        margin-bottom: 1.2em;
+    .section-images-small {
+        column-count: 5;
+        margin: 20px 0 20px 0;
     }
 
 }
@@ -689,6 +729,27 @@ footer {
         font-weight: bold;
         z-index: 1;
         height: 48px;
+    }
+
+    /* CONTENT > PORTFOLIO */
+    .section-images {
+        column-count: 4;
+        position: relative;
+    }
+
+    .section-images>div {
+        padding: 1em;
+        position: relative;
+    }
+
+    .section-images-small {
+        column-count: 6;
+        margin: 20px 0 20px 0;
+    }
+
+    img.thumbnail,
+    span.lightbox {
+        cursor: pointer;
     }
 
     header {
@@ -872,27 +933,8 @@ footer {
         font-size: 2em;
     }
 
-    .section-images {
-        column-count: 5;
-        column-gap: 2em;
-    }
-
-    .section-images div {
-        margin-bottom: 1.2em;
-    }
-
-    img.thumbnail {
-        border: 4px solid transparent;
-    }
-
-    img.thumbnail,
-    span.lightbox {
-        cursor: pointer;
-    }
-
-    img.thumbnail:hover {
-        border: 4px solid #B3BF49;
-        box-shadow: 0 0 10px #B3BF49;
+    main#gallery article:not(:last-child) {
+        margin-bottom: 50px;
     }
 
     /* CONTENT > CONTACT */
