@@ -24,10 +24,10 @@
                     <a href="comissions.html">Comissions</a>
                 </li>
                 <li>
-                    <a href="about.html">About</a>
+                    <a href="about.html" class="active">About</a>
                 </li>
                 <li>
-                    <a href="contact.html" class="active">Contact</a>
+                    <a href="contact.html">Contact</a>
                 </li>
             </ul>
         </nav>
@@ -90,15 +90,17 @@
 
     <main id="contact">
         <p>If you want or need to contact me you can either do so through one of my social networks, preferably Facebook, or simply use this contact form. Be sure to leave full contact details behind so I can get back to you. I will give my best to respond within 24-48 hours typically.</p>
-            <form action="contact_success.html" method="get">
-                    <label for="name">Your Name</label><br>
-                    <input class="text-input" type="text" id="name" name="name" required><br>
-                    <label for="contact">Your Contact Details</label><br>
-                    <input class="text-input" type="text" id="contact" name="contact_method" required><br>
-                    <label for="message">Your Message</label>
-                    <textarea id="message" name="message" required></textarea>
-                    <input class="submit" type="submit" value="Contact Me">
-            </form>
+        <p class="form-success"><strong>Message successfully sent!</strong></p>
+        <p>If you want to send me another one:</p>
+        <form action="contact_success.html" method="get">
+            <label for="name">Your Name</label><br>
+            <input class="text-input" type="text" id="name" name="name" required><br>
+            <label for="contact">Your Contact Details</label><br>
+            <input class="text-input" type="text" id="contact" name="contact_method" required><br>
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" required></textarea>
+            <input class="submit" type="submit" value="Contact Me">
+    </form>
     </main>
     <footer>
         <ul class="socials">
