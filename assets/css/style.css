@@ -25,6 +25,7 @@ header {
     width: 100%;
     height: 50px;
     line-height: 56px;
+    display: block;
 }
 
 #artist-small {
@@ -63,6 +64,7 @@ header {
     position: sticky;
     top: 0px;
     z-index: 10;
+    height: 60px;
 }
 
 /* NAVIGATION > TABLET AND DESKTOP */
@@ -114,11 +116,6 @@ header {
     /* required to make it able to interact upon opening hamburger menu */
 }
 
-#menu_mobile {
-    width: 100%;
-    height: 100%;
-}
-
 #toggle-button i.fa-bars {
     /* hamburger */
     font-size: 2em;
@@ -152,7 +149,6 @@ header {
 
 #left-socials {
     left: -100%;
-    /* -100% */
     width: 30%;
     background-color: #25171A;
     border-right: 1px solid #25171A;
@@ -208,16 +204,12 @@ header {
 
 /* CONTENT */
 /* CONTENT > GENERAL */
-main#gallery,
-main#comissions,
-main#about,
-main#contact {
-    margin: 50px 3vw 25px 3vw;
-    position: relative;
+main {
+    margin: 5px 20px 0 20px;
 }
 
-main#home {
-    margin: 33px 0 50px 0;
+main.touch-nav {
+    margin: -10px;
 }
 
 a.link {
@@ -229,18 +221,6 @@ i.fa-external-link-alt {
     font-size: 0.75em;
 }
 
-/* CONTENT > SHARED */
-main#gallery h2,
-main#comissions h2 {
-    background-color: #25171A;
-    border-bottom: 4px solid #997cdf;
-    padding: 10px;
-    font-size: 1.5em;
-    font-weight: bold;
-    z-index: 1;
-    height: 20px;
-}
-
 /* CONTENT > HOME */
 
 main#home section {
@@ -250,10 +230,10 @@ main#home section {
 }
 
 .fa-chevron-down {
-    position: absolute;
     text-shadow: 0 0 2px #000, 0 0 10px #000, 0 0 30px #000;
     font-size: 3em;
-    top: 93%;
+    position: sticky;
+    top: 90%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
@@ -270,7 +250,7 @@ main#home section {
 
 #hero-text {
     text-align: center;
-    margin: 20px 3vw 0 3vw;
+    margin: 20px 20px 0 20px;
 }
 
 main#home h2 {
@@ -439,7 +419,14 @@ img.thumbnail:focus+span.lightbox {
 }
 
 /* CONTENT > COMISSIONS */
+
 main#comissions h2 {
+    background-color: #25171A;
+    border-bottom: 4px solid #997cdf;
+    padding: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+    height: 20px;
     margin-bottom: 20px;
 }
 
@@ -494,7 +481,7 @@ main#comissions p:not(p.ignore) {
 }
 
 /* CONTENT > ABOUT */
-main#about p:not(:last-child) {
+p.margin-bottom {
     margin-bottom: 20px;
 }
 
@@ -554,9 +541,8 @@ footer {
     display: none;
 }
 
-/* ================================================================== */
 /* MEDIA QUERIES */
-/* MEDIA QUERIES > ARTIST TITLE OPTIMIZATION */
+/* MEDIA QUERIES > ARTIST TITLE OPTIMIZATION ================================================================= */
 @media (max-width: 359px) {
     #artist-small {
         display: initial;
@@ -567,7 +553,7 @@ footer {
     }
 }
 
-/* MEDIA QUERIES > TABLET CHANGES */
+/* MEDIA QUERIES > TABLET CHANGES ================================================================= */
 @media (min-width: 768px) {
 
     body {
@@ -580,6 +566,10 @@ footer {
         width: 100%;
         height: 65px;
         line-height: 70px;
+    }
+
+    #menu_mobile {
+        height: 75px;
     }
 
     #toggle-button i.fa-bars {
@@ -597,30 +587,12 @@ footer {
 
     /* CONTENT */
     /* CONTENT > GENERAL */
-    main#gallery,
-    main#comissions,
-    main#about,
-    main#contact {
-        margin: 65px 3vw 25px 3vw;
-        position: relative;
+    main {
+        margin: 5px 20px 0 20px;
     }
-
-    main#home {
-        margin: 45px 0 50px 0;
-    }
-
-    /* CONTENT > SHARED */
-    main#gallery h2,
-    main#comissions h2 {
-        position: sticky;
-        top: 8px;
-        background-color: #25171A;
-        border-bottom: 4px solid #997cdf;
-        padding: 10px;
-        font-size: 1.5em;
-        font-weight: bold;
-        z-index: 1;
-        height: 28px;
+    
+    main.touch-nav {
+        margin: -10px;
     }
 
     /* CONTENT > HOME */
@@ -643,6 +615,16 @@ footer {
         font-size: 1.5em;
     }
 
+    /* CONTENT > COMISSIONS */
+    main#comissions h2 {
+        background-color: #25171A;
+        border-bottom: 4px solid #997cdf;
+        padding: 10px;
+        font-size: 1.5em;
+        font-weight: bold;
+        height: 28px;
+    }
+
     /* CONTENT > CONTACT */
     main#contact input:not(:last-child),
     main#contact textarea {
@@ -656,6 +638,34 @@ footer {
 
 }
 
+/* MEDIA QUERIES > LANDSCAPE ================================================================= */
+@media (orientation: landscape) {
+    
+   
+    main {
+        margin-bottom: 20px;
+    }
+
+    /* CONTENT > ABOUT */
+    main#about section#about-image {
+        padding: 0 0 20px 20px;
+    }
+
+    main#about section#about-text {
+        padding: 0 0 20px;
+    }
+    
+    section#about-image {
+        float: right; 
+        max-width: 40%;
+    }
+
+    #about-image img {
+        margin: 0;
+    }
+}
+
+/* MEDIA QUERIES > HOME CONTENT INDICATOR ================================================================= */
 @media (min-height: 745px) {
 
     /* CONTENT > HOME */
@@ -664,28 +674,25 @@ footer {
     }
 }
 
-/* MEDIA QUERIES > SMALL DESKTOP / BIG TABLET CHANGES */
-@media (min-width: 1024px) {
+/* MEDIA QUERIES > HOME CONTENT INDICATOR LANDSCAPE ======================================================== */
+@media (max-height: 710px) and (orientation: landscape) and (max-width: 1380px) {
 
     /* CONTENT > HOME */
+    main#home section {
+        height: 400px;
+
+    }
+    
     #hero-image {
-        background-size: 200%;
-    }
-
-    /* CONTENT > PORTFOLIO */
-    .section-images {
-        column-count: 4;
-        column-gap: 2em;
-    }
-
-    .section-images div {
-        margin-bottom: 1.2em;
+        background-size: 250%;
     }
 
 }
 
+
+
 /* MEDIA QUERIES > BIG SCREEN CHANGES */
-@media (min-width: 1680px) {
+@media (min-width: 1369px) {
 
     body {
         font-size: 1em;
