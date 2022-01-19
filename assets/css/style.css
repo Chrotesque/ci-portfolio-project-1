@@ -224,9 +224,7 @@ i.fa-external-link-alt {
 /* CONTENT > HOME */
 
 main#home section {
-    height: 600px;
     width: 100%;
-    position: relative;
 }
 
 .fa-chevron-down {
@@ -245,7 +243,11 @@ main#home section {
     background-repeat: no-repeat;
     background-position: left;
     background-size: 350%;
-    height: 100%;
+    height: 600px;
+    animation-name: hero-scroll;
+    animation-duration: 60s;
+    animation-fill-mode: forward;
+    animation-iteration-count: infinite;
 }
 
 #hero-text {
@@ -275,13 +277,6 @@ main#home p {
 
 main#home ul {
     list-style-type: none;
-}
-
-#hero-image {
-    animation-name: hero-scroll;
-    animation-duration: 60s;
-    animation-fill-mode: forward;
-    animation-iteration-count: infinite;
 }
 
 @keyframes hero-scroll {
@@ -347,10 +342,6 @@ main#home ul {
 
 
 /* CONTENT > PORTFOLIO */
-main#gallery section:not(:first-child) {
-    margin-top: 50px;
-}
-
 img.thumbnail {
     width: 100% !important;
     height: auto !important;
@@ -361,13 +352,12 @@ img.thumbnail {
     box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
 }
 
-.section-images {
+main#gallery {
     column-count: 2;
     column-gap: 1em;
-    width: 100%;
 }
 
-.section-images div {
+main#gallery div {
     margin-bottom: 0.8em;
 }
 
@@ -430,11 +420,11 @@ main#comissions h2 {
     margin-bottom: 20px;
 }
 
-section.margin-bottom {
-    margin-bottom: 40px;
+main#comissions div.margin-bottom {
+    margin-bottom: 20px;
 }
 
-main#comissions section ol {
+main#comissions div ol {
     list-style-position: inside;
     padding-left: 5px;
 }
@@ -452,19 +442,29 @@ main#comissions p:not(p.ignore) {
     grid-template-columns: auto auto;
 }
 
-.table strong {
-    font-size: 1.1em;
+strong {
+    font-size: 1.2em;
 }
 
-.table ul {
-    list-style-type: none;
+table {
+    width: 100%;
+    vertical-align: top;
 }
 
-.table ul li {
-    padding: 5px;
+.col-left, .col-right {
+    vertical-align: top;
+    padding: 10px;
 }
 
-.table ul li:nth-child(odd) {
+.col-right {
+    text-align: center;
+}
+
+.col-left {
+    text-align: left;
+}
+
+tr:nth-child(even) {
     background-color: rgba(37, 23, 26, 0.35);
 }
 
@@ -602,12 +602,12 @@ footer {
     }
 
     /* CONTENT > PORTFOLIO */
-    .section-images {
+    main#gallery {
         column-count: 3;
         column-gap: 2em;
     }
 
-    .section-images div {
+    main#gallery div {
         margin-bottom: 1.2em;
     }
 
@@ -619,10 +619,22 @@ footer {
     main#comissions h2 {
         background-color: #25171A;
         border-bottom: 4px solid #997cdf;
-        padding: 10px;
         font-size: 1.5em;
         font-weight: bold;
         height: 28px;
+    }
+
+    main#comissions > div {
+        width: 49%;
+        float: right; 
+    }
+
+    main#comissions div:first-child {
+        float: left;
+    }
+
+    main#comissions div.margin-bottom {
+        margin-bottom: 40px;
     }
 
     /* CONTENT > CONTACT */
@@ -678,21 +690,15 @@ footer {
 @media (max-height: 710px) and (orientation: landscape) and (max-width: 1380px) {
 
     /* CONTENT > HOME */
-    main#home section {
-        height: 400px;
-
-    }
-    
     #hero-image {
         background-size: 250%;
+        height: 400px;
     }
 
 }
 
-
-
 /* MEDIA QUERIES > BIG SCREEN CHANGES */
-@media (min-width: 1369px) {
+@media (min-width: 1200px) {
 
     body {
         font-size: 1em;
@@ -712,7 +718,6 @@ footer {
     }
 
     /* CONTENT > SHARED */
-    main#gallery h2,
     main#comissions h2 {
         position: sticky;
         top: 99px;
@@ -798,12 +803,11 @@ footer {
     /* CONTENT */
     /* CONTENT > HOME */
     main#home section {
-        height: 100vh;
         width: 100%;
-        position: relative;
     }
 
     #hero-image {
+        height: 100vh;
         background-size: 100%;
     }
 
@@ -811,10 +815,6 @@ footer {
         text-align: center;
         position: absolute;
         background-color: rgba(255, 255, 255, 0.65);
-        padding: 25px;
-        right: 0;
-        bottom: 0;
-        margin: 0 30px 30px;
         color: #25171A;
     }
 
@@ -898,16 +898,12 @@ footer {
 
     /* CONTENT > PORTFOLIO */
 
-    main#gallery h2 {
-        font-size: 3em;
-    }
-
-    .section-images {
+    main#gallery {
         column-count: 5;
         column-gap: 2em;
     }
 
-    .section-images div {
+    main#gallery div {
         margin-bottom: 1.2em;
     }
 
