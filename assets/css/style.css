@@ -496,9 +496,12 @@ p.margin-bottom {
     margin-bottom: 20px;
 }
 
+#about-image {
+    padding: 0 0 1rem 0;
+}
+
 #about-image img {
     width: 100%;
-    margin-bottom: 20px;
     box-sizing: border-box;
     box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
 }
@@ -587,6 +590,15 @@ footer {
 }
 
 /* MEDIA QUERIES > TABLET CHANGES ================================================================= */
+@media (max-width: 767px) and (orientation: landscape) {
+    #about-image {
+        width: 50%;
+        float: right;
+        padding: 0 0 0 1rem;
+    }
+}
+
+/* MEDIA QUERIES > TABLET CHANGES ================================================================= */
 @media (min-width: 768px) {
 
     body {
@@ -622,7 +634,7 @@ footer {
     /* CONTENT > GENERAL */
     main {
         margin: 2rem 4rem 0 4rem;
-        line-height: 1.25rem;
+        line-height: 1.5rem;
     }
     
     main.touch-nav {
@@ -660,6 +672,13 @@ footer {
 
     main#comissions div.margin-bottom {
         margin-bottom: 40px;
+    }
+
+    /* CONTENT > ABOUT */
+    #about-image {
+        width: 60%;
+        float: right;
+        padding: 0 0 2rem 2rem;
     }
 
     /* CONTENT > CONTACT */
