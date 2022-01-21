@@ -13,6 +13,8 @@ body {
     font-family: "Josefin Sans", sans-serif;
     font-size: 1em;
     box-sizing: inherit;
+    position: relative;
+    min-height: 100%;
 }
 
 
@@ -205,7 +207,7 @@ header {
 /* CONTENT */
 /* CONTENT > GENERAL */
 main {
-    margin: 5px 20px 0 20px;
+    margin: 5px 20px 20px 20px;
 }
 
 main.touch-nav {
@@ -215,6 +217,7 @@ main.touch-nav {
 a.link {
     text-decoration: none;
     color: #CEE002;
+    display: inline-block; /* to ensure that the external icon and subsequent text are not separated by a line break */ 
 }
 
 i.fa-external-link-alt {
@@ -430,11 +433,15 @@ main#comissions div ol {
 }
 
 main#comissions ol li {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
-main#comissions p:not(p.ignore) {
+main#comissions p {
     margin-bottom: 15px;
+}
+
+main#comissions p.ignore {
+    margin-bottom: 0px;
 }
 
 .table {
@@ -495,6 +502,30 @@ p.margin-bottom {
 /* CONTENT > CONTACT */
 main#contact p {
     margin-bottom: 20px;
+    clear: both;
+}
+
+#contact-text ul {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact-text {
+    line-height: 1.5em;
+}
+
+#contact-text li {
+    list-style-type: none;
+    float: left;
+    padding: 0 10px 0 10px;
+}
+
+#contact-text li a {
+
+    font-size: 2em;
+    color: #9689F6;
 }
 
 main#contact p.form-success {
@@ -554,7 +585,7 @@ footer {
 }
 
 /* MEDIA QUERIES > TABLET CHANGES ================================================================= */
-@media (min-width: 768px) {
+@media (min-width: 768px) and (orientation: portrait) {
 
     body {
         font-size: 1.25em;
@@ -624,20 +655,13 @@ footer {
         height: 28px;
     }
 
-    main#comissions > div {
-        width: 49%;
-        float: right; 
-    }
-
-    main#comissions div:first-child {
-        float: left;
-    }
-
     main#comissions div.margin-bottom {
         margin-bottom: 40px;
     }
 
     /* CONTENT > CONTACT */
+
+
     main#contact input:not(:last-child),
     main#contact textarea {
         margin-bottom: 30px;
@@ -645,7 +669,7 @@ footer {
 
     main#contact textarea {
         resize: vertical;
-        height: 10em;
+        height: 7em;
     }
 
 }
@@ -656,6 +680,16 @@ footer {
    
     main {
         margin-bottom: 20px;
+    }
+
+    /* CONTENT > COMISSIONS */
+    main#comissions > div {
+        width: 49%;
+        float: right; 
+    }
+
+    main#comissions div:first-child {
+        float: left;
     }
 
     /* CONTENT > ABOUT */
@@ -674,6 +708,32 @@ footer {
 
     #about-image img {
         margin: 0;
+    }
+
+    /* CONTENT > CONTACT */
+    #contact-text, main#contact form {
+        width: 48%;
+        display: block;
+    }
+
+    #contact-text {
+        float: left;
+        line-height: 1.5em;
+    }
+
+    #contact-text li {
+        list-style-type: none;
+        float: left;
+    }
+
+    #contact-text li a {
+
+        font-size: 2em;
+        color: #9689F6;
+    }
+
+    main#contact form {
+        float: right;
     }
 }
 
@@ -951,7 +1011,7 @@ footer {
     /* FOOTER */
 
     footer {
-        position: sticky;
+        position: fixed;
         bottom: 0;
         display: flex;
         justify-content: center;
@@ -959,8 +1019,8 @@ footer {
         background-color: #25171A;
         width: 100%;
         height: 100px;
-        margin-top: 100px;
-        z-index: 2;
+
+        
     }
 
     footer li {
