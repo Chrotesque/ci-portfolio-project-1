@@ -596,6 +596,7 @@ input.btn-submit {
 
 /* FOOTER */
 footer {
+    clear: both;
     display: none;
 }
 
@@ -655,7 +656,7 @@ footer {
     /* CONTENT */
     /* CONTENT > GENERAL */
     main {
-        margin: 2rem 4rem 0 4rem;
+        margin: 2rem 4rem 2rem 4rem;
         line-height: 1.5rem;
     }
     
@@ -697,8 +698,14 @@ footer {
         margin-bottom: 2rem;
     }
 
-    main#comissions div {
-        width: 49%;
+main#comissions {
+    column-count: 2;
+    column-gap: 2rem;
+}
+
+    main#comissions > div {
+        width: 100%;
+        -webkit-column-break-inside:avoid;
     }
 
     /* CONTENT > ABOUT */
@@ -758,14 +765,12 @@ footer {
 
     /* CONTENT > SHARED */
     main#comissions h2 {
-        position: sticky;
         top: 99px;
         background-color: rgba(37, 23, 26, 0.85);
         border-bottom: 4px solid #997cdf;
         padding: 10px;
         font-size: 1.5em;
         font-weight: bold;
-        z-index: 1;
         height: 48px;
     }
 
