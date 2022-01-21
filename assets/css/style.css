@@ -4,7 +4,11 @@
 * {
     margin: 0;
     padding: 0;
-    border: 0;
+    border: none;
+}
+
+html body {
+    overflow-x: hidden;
 }
 
 body {
@@ -207,7 +211,7 @@ header {
 /* CONTENT */
 /* CONTENT > GENERAL */
 main {
-    margin: 5px 20px 20px 20px;
+    margin: 1rem 1.5rem 1rem 1.5rem;
 }
 
 main.touch-nav {
@@ -501,31 +505,11 @@ p.margin-bottom {
 
 /* CONTENT > CONTACT */
 main#contact p {
-    margin-bottom: 20px;
-    clear: both;
+    margin-bottom: 1rem;
 }
 
-#contact-text ul {
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#contact-text {
-    line-height: 1.5em;
-}
-
-#contact-text li {
-    list-style-type: none;
-    float: left;
-    padding: 0 10px 0 10px;
-}
-
-#contact-text li a {
-
-    font-size: 2em;
-    color: #9689F6;
+form {
+    margin-top: 2rem;
 }
 
 main#contact p.form-success {
@@ -534,14 +518,16 @@ main#contact p.form-success {
 }
 
 main#contact label {
-    font-size: 1.5em;
+    font-size: 1.1rem;
 }
 
-main#contact input,
-main#contact textarea {
-    font-family: "Josefin Sans", sans-serif;
-    font-size: 1.5em;
+input.text, textarea.text {
     width: 100%;
+}
+
+input.text, textarea.text, input.btn {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.1rem;
     line-height: 30px;
     background-color: #25171A;
     padding: 10px;
@@ -549,21 +535,37 @@ main#contact textarea {
     box-sizing: border-box;
 }
 
+input.btn-reset {
+    width: 40%;
+}
+
+input.btn-submit {
+    width: 50%;
+}
+
 main#contact input:not(:last-child),
 main#contact textarea {
     margin-bottom: 20px;
 }
 
-main#contact textarea {
+textarea.text {
     resize: vertical;
-    height: 5em;
+    height: 10rem;
 }
 
-main#contact input.submit {
+input.btn {
     background-color: #C8C5E3;
     color: #25171A;
     font-weight: bold;
     letter-spacing: 1px;
+}
+
+input.btn-reset {
+    float: left;
+}
+
+input.btn-submit {
+    float: right;
 }
 
 
@@ -585,10 +587,10 @@ footer {
 }
 
 /* MEDIA QUERIES > TABLET CHANGES ================================================================= */
-@media (min-width: 768px) and (orientation: portrait) {
+@media (min-width: 768px) {
 
     body {
-        font-size: 1.25em;
+        font-size: 1.1rem;
     }
 
     header {
@@ -619,7 +621,8 @@ footer {
     /* CONTENT */
     /* CONTENT > GENERAL */
     main {
-        margin: 5px 20px 0 20px;
+        margin: 2rem 4rem 0 4rem;
+        line-height: 1.25rem;
     }
     
     main.touch-nav {
@@ -672,69 +675,14 @@ footer {
         height: 7em;
     }
 
-}
-
-/* MEDIA QUERIES > LANDSCAPE ================================================================= */
-@media (orientation: landscape) {
-    
-   
-    main {
-        margin-bottom: 20px;
+    input.btn-reset {
+        width: 25%;
     }
 
-    /* CONTENT > COMISSIONS */
-    main#comissions > div {
-        width: 49%;
-        float: right; 
+    input.btn-submit {
+        width: 35%;
     }
 
-    main#comissions div:first-child {
-        float: left;
-    }
-
-    /* CONTENT > ABOUT */
-    main#about section#about-image {
-        padding: 0 0 20px 20px;
-    }
-
-    main#about section#about-text {
-        padding: 0 0 20px;
-    }
-    
-    section#about-image {
-        float: right; 
-        max-width: 40%;
-    }
-
-    #about-image img {
-        margin: 0;
-    }
-
-    /* CONTENT > CONTACT */
-    #contact-text, main#contact form {
-        width: 48%;
-        display: block;
-    }
-
-    #contact-text {
-        float: left;
-        line-height: 1.5em;
-    }
-
-    #contact-text li {
-        list-style-type: none;
-        float: left;
-    }
-
-    #contact-text li a {
-
-        font-size: 2em;
-        color: #9689F6;
-    }
-
-    main#contact form {
-        float: right;
-    }
 }
 
 /* MEDIA QUERIES > HOME CONTENT INDICATOR ================================================================= */
@@ -746,30 +694,15 @@ footer {
     }
 }
 
-/* MEDIA QUERIES > HOME CONTENT INDICATOR LANDSCAPE ======================================================== */
-@media (max-height: 710px) and (orientation: landscape) and (max-width: 1380px) {
-
-    /* CONTENT > HOME */
-    #hero-image {
-        background-size: 250%;
-        height: 400px;
-    }
-
-}
-
 /* MEDIA QUERIES > BIG SCREEN CHANGES */
 @media (min-width: 1200px) {
-
-    body {
-        font-size: 1em;
-    }
 
     /* CONTENT > GENERAL */
     main#gallery,
     main#comissions,
     main#about,
     main#contact {
-        margin: 70px 5vw 0 5vw;
+        margin: 50px auto 0 auto;
         position: relative;
     }
 
@@ -861,6 +794,11 @@ footer {
     }
 
     /* CONTENT */
+    /* CONTENT > GENERAL */
+    main {
+        width: min(90%, 60rem);
+    }
+
     /* CONTENT > HOME */
     main#home section {
         width: 100%;
@@ -985,29 +923,6 @@ footer {
         box-shadow: 0 0 10px #B3BF49;
     }
 
-    /* CONTENT > CONTACT */
-    .grid {
-        display: grid;
-        grid-template-columns: fit-content(40%);
-        grid-column-gap: 100px;
-    }
-
-    main#contact-socials {
-        display: flex;
-        justify-content: left;
-        align-items: center;
-    }
-
-    main#contact-socials li {
-        list-style-type: none;
-    }
-
-    main#contact-form,
-    main#contact-socials {
-        float: left;
-        width: 20%;
-    }
-
     /* FOOTER */
 
     footer {
@@ -1018,24 +933,22 @@ footer {
         align-items: center;
         background-color: #25171A;
         width: 100%;
-        height: 100px;
-
-        
+        height: 5rem;
     }
 
     footer li {
         list-style-type: none;
         float: left;
-        display: block;
     }
 
     footer li a {
         display: inline-block;
-        font-size: 2em;
+        font-size: 3rem;
         color: #9689F6;
-        line-height: 100px;
-        width: 250px;
+        line-height: 5rem;
+        width: 10rem;
         text-align: center;
+        vertical-align: bottom;
     }
 
     footer li a:hover {
