@@ -7,8 +7,8 @@
     border: none;
 }
 
-html body {
-    overflow-x: hidden;
+html, body {
+    height: 100%;
 }
 
 body {
@@ -18,7 +18,6 @@ body {
     font-size: 1em;
     box-sizing: inherit;
     position: relative;
-    min-height: 100%;
 }
 
 /* COLORS */
@@ -66,6 +65,11 @@ header {
 #artist-small a {
     text-decoration: none;
     color: #C8C5E3;
+}
+
+h2#subtitle {
+    display: none;
+    position: absolute;
 }
 
 /* NAVIGATION */
@@ -221,7 +225,7 @@ main {
 }
 
 main.touch-nav {
-    margin: -10px;
+    margin: -10px 0 0 0;
 }
 
 a.link {
@@ -234,29 +238,41 @@ i.fa-external-link-alt {
     font-size: 0.75em;
 }
 
-.float-left {
-    float: left;
-}
-
-.float-right {
-    float: right;
-}
-
 /* CONTENT > HOME */
+i#preload {
+    content:    url("../images/carousel/collage_stickers.jpg")
+                url("../images/carousel/collage_paintings.jpg");
+}
 
 main#home section {
     width: 100%;
 }
 
+#hero-image-text {
+    height: 100%;
+    text-align: center;
+}
+
 .fa-chevron-down {
-    text-shadow: 0 0 2px #000, 0 0 10px #000, 0 0 30px #000;
-    font-size: 3em;
     position: sticky;
-    top: 90%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
+    text-shadow: 0 0 2px #000, 0 0 10px #000, 0 0 30px #000;
     color: #C8C5E3;
+}
+
+.hero-image-text {
+    top: 5%;
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+    background-color: rgba(37, 23, 26, 0.85);
+    padding-left: 2rem;
+    line-height: 2rem;
+    text-align: left;
+}
+
+.fa-chevron-down {
+    top: 88%;
+    font-size: 3rem;
+
 }
 
 #hero-image {
@@ -269,11 +285,12 @@ main#home section {
     animation-duration: 60s;
     animation-fill-mode: forward;
     animation-iteration-count: infinite;
+    box-shadow: 0 5px 4px rgba(0, 0, 0, 0.25);
 }
 
 #hero-text {
     text-align: center;
-    margin: 20px 20px 0 20px;
+    margin: 2rem 1rem 1rem 1rem;
 }
 
 main#home h2 {
@@ -281,7 +298,7 @@ main#home h2 {
     color: #C8C5E3;
 }
 
-main#home a {
+a.link-cta {
     margin-top: 10px;
     display: inline-block;
     padding: 10px;
@@ -292,7 +309,7 @@ main#home a {
     margin-bottom: 10px;
 }
 
-main#home p {
+#hero-text p {
     padding: 10px 0 10px;
 }
 
@@ -614,6 +631,11 @@ footer {
 
 /* MEDIA QUERIES > TABLET CHANGES ================================================================= */
 @media (max-width: 767px) and (orientation: landscape) {
+
+    #hero-image {
+        background-size: 250%;
+    }
+
     #about-image {
         width: 50%;
         float: right;
@@ -658,16 +680,17 @@ footer {
     main {
         margin: 2rem 4rem 2rem 4rem;
         line-height: 1.5rem;
+        position: relative; 
+	    min-height: 99%;
     }
     
     main.touch-nav {
-        margin: -10px;
+        margin: -10px 0 0 0;
     }
 
     /* CONTENT > HOME */
     #hero-image {
         background-size: 200%;
-        background-position-y: 280px;
     }
 
     /* CONTENT > PORTFOLIO */
@@ -750,19 +773,6 @@ main#comissions {
 /* MEDIA QUERIES > BIG SCREEN CHANGES */
 @media (min-width: 1200px) {
 
-    /* CONTENT > GENERAL */
-    main#gallery,
-    main#comissions,
-    main#about,
-    main#contact {
-        margin: 50px auto 0 auto;
-        position: relative;
-    }
-
-    main#home {
-        margin: -280px 0 50px 0;
-    }
-
     /* CONTENT > SHARED */
     main#comissions h2 {
         top: 99px;
@@ -777,19 +787,32 @@ main#comissions {
     header {
         position: sticky;
         top: 0;
-        height: 100px;
+        height: 81px;
         box-shadow: 0 0 10px #25171A;
         z-index: 2;
     }
 
     #artist-big {
-        font-size: 3em;
-        line-height: 100px;
+        font-size: 3rem;
+        line-height: 70px;
         padding-left: 20px;
     }
 
     #artist-big a:hover {
         color: #C8C5E3;
+    }
+
+    h2#subtitle {
+        display: initial;
+        left: 0;
+        font-size: 1rem;
+        line-height: 2rem;
+        text-align: left;
+        margin: 46px 0 0 61px;
+        position: absolute;
+        z-index: 100;
+        letter-spacing: 2.5px;
+        font-size: 1rem;
     }
 
     /* NAVIGATION > MOBILE */
@@ -800,7 +823,7 @@ main#comissions {
     /* NAVIGATION > DESKTOP */
     #menu_desktop {
         display: initial;
-        font-size: 1.5vw;
+        font-size: 1.5rem;
         height: 100%;
         float: right;
     }
@@ -816,8 +839,9 @@ main#comissions {
         text-decoration: none;
         color: #9689F6;
         height: 100%;
-        line-height: 100px;
+        line-height: 88px;
         text-align: center;
+        vertical-align: middle;
         transition: all 0.15s ease-out;
         padding: 0 2vw 0 2vw;
     }
@@ -844,10 +868,24 @@ main#comissions {
         line-height: 60px;
     }
 
+    #wrapper {
+        min-height: 100%;
+    }
+
     /* CONTENT */
     /* CONTENT > GENERAL */
     main {
         width: min(90%, 60rem);
+        margin: 3rem auto 1rem auto;
+        overflow: auto;
+        padding-bottom: 3rem;
+    }
+
+    main.touch-nav {
+        margin: 0 auto 1rem auto;
+        width: 100%;
+        overflow: auto;
+        padding-bottom: 100px;
     }
 
     /* CONTENT > HOME */
@@ -856,35 +894,27 @@ main#comissions {
     }
 
     #hero-image {
-        height: 100vh;
+        height: 800px;
         background-size: 100%;
     }
 
     #hero-text {
         text-align: center;
         position: absolute;
-        background-color: rgba(255, 255, 255, 0.65);
-        color: #25171A;
+        background-color: rgba(0, 0, 0, 0.75);
+        bottom: 0;
+        right: 0;
+        padding: 2rem;
+        width: 600px;
+        margin: 0 2rem 2rem;
+    }
+
+    .hero-image-text {
+        display: none;
     }
 
     main#home h2 {
-        font-size: 2em;
-        color: #25171A;
-    }
-
-    main#home a {
-        margin-top: 10px;
-        display: inline-block;
-        padding: 10px;
-        background-color: #B3BF49;
-        text-decoration: none;
-        color: #25171A;
-        font-size: 1.5em;
-        margin-bottom: 10px;
-    }
-
-    main#home p {
-        padding: 10px 0 10px;
+        font-size: 2rem;
     }
 
     main#home ul {
@@ -976,30 +1006,37 @@ main#comissions {
 
     /* FOOTER */
 
-    footer {
-        position: fixed;
-        bottom: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #25171A;
-        width: 100%;
-        height: 5rem;
-    }
+footer {
+    background-color: #25171A;
+    width: 100%;
+    list-style-type: none;
+    position: relative;
+    height: 3rem;
+    margin-top: -3rem;
+    clear: both;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+    footer ul {
+        text-align: center;   
+    }
+    
     footer li {
-        list-style-type: none;
-        float: left;
+        display: inline-block;
+        line-height: 3rem;
+    }
+    
+    footer i {
+        font-size: 2rem;
+        padding: 0 2rem 0 2rem;
+        color: #9689F6;
+        vertical-align: middle;
     }
 
     footer li a {
         display: inline-block;
-        font-size: 3rem;
-        color: #9689F6;
-        line-height: 5rem;
-        width: 10rem;
-        text-align: center;
-        vertical-align: bottom;
     }
 
     footer li a:hover {

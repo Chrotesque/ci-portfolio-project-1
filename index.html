@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <div id="wrapper"> 
     <header>
         <h1 id="artist-big">
             <a href="index.html">Joyce Brok</a>
@@ -15,6 +16,7 @@
         <h1 id="artist-small">
             <a href="index.html">JB</a>
         </h1>
+        <h2 id="subtitle">Digital Artist & Facebook Streamer</h2>
         <nav id="menu_desktop">
             <ul>
                 <li>
@@ -86,15 +88,20 @@
                 </li>
             </ul>
         </div>
-    </nav>   
+    </nav>  
     <main id="home" class="touch-nav">
         <section>
-            <div id="hero-image"><i class="fas fa-chevron-down"></i></div>
+            <div id="hero-image">
+                <div id="hero-image-text">
+                    <p class="hero-image-text">Digital Artist & Facebook Streamer</p>
+                    <i class="fas fa-chevron-down"></i>
+                    <i id="preload"></i>
+                </div>
+            </div>
             <div id="hero-text">
-                <h2>Heya!</h2>
-                <p>I love making  all kinds of digital art.</p>
-                <a href="gallery.html">Check out my work in my gallery!</a>
-                <p>I also love to stream video games especially in VR, as well as sometimes draw on stream.</p>
+                <h2>Welcome!</h2>
+                <p>I love making all kinds of digital art, take a look at my <a class="link" href="gallery.html">portfolio</a> and if you'd like something drawn, have a look at the <a class="link" href="comissions.html">comissions page</a> for details.</p>
+                <p>I also stream 3 times a week playing various video games and sometimes in VR, as well as occasionally draw on stream.</p>
                 <p>Here is my streaming schedule:
                     <ul>
                         <li>Tue @ 19:30 CEST - 23:00+ CEST</li>
@@ -102,10 +109,11 @@
                         <li>Sat @ 19:30 CEST - 23:00+ CEST</li>
                     </ul>
                 </p>
-                <a href="https://www.facebook.com/ayareagaming" target="_blank" rel="noopener" aria-label="Visit my Facebook page (opens in a new tab)"><i class="fas fa-external-link-alt"></i> Come hang out on Facebook!</a>
+                <a class="link-cta" href="https://www.facebook.com/ayareagaming" target="_blank" rel="noopener" aria-label="Visit my Facebook page (opens in a new tab)"><i class="fas fa-external-link-alt"></i> Come hang out on Facebook!</a>
             </div>
         </section>
     </main>
+</div>
     <footer>
         <ul class="socials">
             <li>
@@ -135,6 +143,7 @@
             </li>
         </ul>
     </footer>
+    
     <script src="https://kit.fontawesome.com/e7deff2959.js" crossorigin="anonymous"></script>
 </body>
 </html>
