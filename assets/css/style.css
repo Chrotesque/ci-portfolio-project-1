@@ -109,7 +109,7 @@ h2#subtitle {
 }
 
 #checkbox-toggle:checked~#right-nav {
-    right: 0 !important;
+    right: -1px !important;
 }
 
 #checkbox-toggle:checked~#toggle-button i.fa-bars {
@@ -174,8 +174,8 @@ h2#subtitle {
 #left-socials ul li {
     list-style: none;
     text-align: center;
-    font-size: 7vh;
-    line-height: 2.9em;
+    font-size: 2.5rem; 
+    line-height: 4.5rem;
 }
 
 #left-socials ul li a,
@@ -200,8 +200,8 @@ h2#subtitle {
 #right-nav ul li {
     list-style: none;
     text-align: center;
-    font-size: 6vmin;
-    line-height: 3em;
+    font-size: 2rem; /* 6vmin */
+    line-height: 4rem;
 }
 
 #right-nav ul li a {
@@ -622,6 +622,31 @@ footer {
 
     #artist-big {
         display: none;
+    }
+}
+
+/* MEDIA QUERIES > HEIGHT NAVIGATION ADJUSTMENTS =========================================================== */
+@media (min-height: 550px) {
+    #left-socials ul li {
+        font-size: 3rem;
+        line-height: 6rem;
+    }
+
+    #right-nav ul li {
+        font-size: 2rem; 
+        line-height: 6rem;
+    }
+}
+
+@media (min-height: 750px) {
+    #left-socials ul li {
+        font-size: 3.5rem;
+        line-height: 8rem;
+    }
+
+    #right-nav ul li {
+        font-size: 2rem; 
+        line-height: 7.5rem;
     }
 }
 
