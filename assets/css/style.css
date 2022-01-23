@@ -220,6 +220,10 @@ h2#subtitle {
 
 /* CONTENT */
 /* CONTENT > GENERAL */
+#wrapper {
+    padding-bottom: 0.1px;
+}
+
 main {
     margin: 1rem 1.5rem 1rem 1.5rem;
 }
@@ -563,11 +567,12 @@ main#contact label {
     font-size: 1.1rem;
 }
 
-input.text, textarea.text {
+.form-text {
     width: 100%;
+    margin-bottom: 20px;
 }
 
-input.text, textarea.text, input.btn {
+input, textarea {
     font-family: "Josefin Sans", sans-serif;
     font-size: 1.1rem;
     line-height: 30px;
@@ -577,43 +582,34 @@ input.text, textarea.text, input.btn {
     box-sizing: border-box;
 }
 
-input.btn-reset {
+.btn-reset {
     width: 40%;
+    float: left;
 }
 
-input.btn-submit {
+.btn-submit {
     width: 50%;
+    float: right;
 }
 
-main#contact input:not(:last-child),
-main#contact textarea {
-    margin-bottom: 20px;
-}
-
-textarea.text {
+textarea {
     resize: vertical;
     height: 10rem;
 }
 
-input.btn {
+.btn {
     background-color: #C8C5E3;
     color: #25171A;
     font-weight: bold;
     letter-spacing: 1px;
 }
 
-input.btn-reset {
-    float: left;
+div.clear {
+    clear: both;
 }
-
-input.btn-submit {
-    float: right;
-}
-
 
 /* FOOTER */
 footer {
-    clear: both;
     display: none;
 }
 
@@ -870,43 +866,52 @@ main#comissions {
 
     #wrapper {
         min-height: 100%;
+        padding: 0;
     }
 
     /* CONTENT */
     /* CONTENT > GENERAL */
-    main {
-        width: min(90%, 60rem);
-        margin: 3rem auto 1rem auto;
-        overflow: auto;
+    main.touch-nav {
         padding-bottom: 3rem;
     }
 
+    main {
+        width: min(90%, 60rem);
+        margin: 3rem auto 1rem auto;
+    }
+
     main.touch-nav {
-        margin: 0 auto 1rem auto;
+        margin: 0 auto 0 auto;
         width: 100%;
-        overflow: auto;
-        padding-bottom: 100px;
     }
 
     /* CONTENT > HOME */
-    main#home section {
-        width: 100%;
+
+    #wrapper {
+        height: 100%;
+        overflow: hidden;
     }
 
     #hero-image {
-        height: 800px;
-        background-size: 100%;
+        background-size: 125%;
+        height: 100%;
+        display: block;
+        overflow: hidden;
+        position:absolute;
+        top:0px;
+        right:0px;
+        bottom:0px;
+        left:0px;
     }
 
     #hero-text {
         text-align: center;
         position: absolute;
         background-color: rgba(0, 0, 0, 0.75);
-        bottom: 0;
         right: 0;
         padding: 2rem;
         width: 600px;
-        margin: 0 2rem 2rem;
+        margin: 2rem 5rem;
     }
 
     .hero-image-text {
@@ -921,59 +926,7 @@ main#comissions {
         list-style-type: none;
     }
 
-    @keyframes hero-scroll {
-        0% {
-            background-image: url("../images/carousel/collage_posters.jpg");
-        }
 
-        12% {
-            background-image: url("../images/carousel/collage_posters.jpg");
-        }
-
-        16% {
-            background-image: url("../images/carousel/collage_stickers.jpg");
-        }
-
-        29% {
-            background-image: url("../images/carousel/collage_stickers.jpg");
-        }
-
-        33% {
-            background-image: url("../images/carousel/collage_paintings.jpg");
-        }
-
-        46% {
-            background-image: url("../images/carousel/collage_paintings.jpg");
-        }
-
-        50% {
-            background-image: url("../images/carousel/collage_posters.jpg");
-        }
-
-        62% {
-            background-image: url("../images/carousel/collage_posters.jpg");
-        }
-
-        66% {
-            background-image: url("../images/carousel/collage_stickers.jpg");
-        }
-
-        79% {
-            background-image: url("../images/carousel/collage_stickers.jpg");
-        }
-
-        83% {
-            background-image: url("../images/carousel/collage_paintings.jpg");
-        }
-
-        96% {
-            background-image: url("../images/carousel/collage_paintings.jpg");
-        }
-
-        100% {
-            background-image: url("../images/carousel/collage_posters.jpg");
-        }
-    }
 
     /* CONTENT > PORTFOLIO */
 

@@ -97,21 +97,24 @@
         </div>
         <form action="contact_success.html" method="get">
             <label for="name">Your Name</label><br>
-            <input class="text" type="text" id="name" name="form_name" required><br>
+            <input class="form-text" type="text" id="name" name="form_name" required><br>
             <label for="contact">Your Contact Details</label><br>
-            <input class="text" type="text" id="contact" name="form_contact" required><br>
+            <input class="form-text" type="text" id="contact" name="form_contact" required><br>
             <label for="subject">What is your Message about?</label><br>
-            <input class="text" type="text" id="form_subject" name="subject" list="subject" required>
+            <input class="form-text" type="text" id="form_subject" name="subject" list="subject" required>
             <datalist id="subject">
                 <option value="Art Comission"></option>
                 <option value="Streaming Related"></option>
                 <option value="Other Business"></option>
             </datalist>
             <label for="message">Your Message</label>
-            <textarea class="text" id="message" name="form_message" required></textarea>
-            <input class="btn btn-reset" type="reset" value="Reset Form">
-            <input class="btn btn-submit" type="submit" value="Contact Me">
+            <textarea class="form-text" id="message" name="form_message" required></textarea>
+            <div class="float-container">
+                <input class="btn btn-reset" type="reset" value="Reset Form">
+                <input class="btn btn-submit" type="submit" value="Contact Me">
+            </div>
         </form>
+        <div class="clear"></div>
     </main>
     </div>
     <footer>

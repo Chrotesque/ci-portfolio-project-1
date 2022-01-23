@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <div id="wrapper"> 
     <header>
         <h1 id="artist-big">
             <a href="index.html">Joyce Brok</a>
@@ -87,21 +88,35 @@
             </ul>
         </div>
     </nav> 
-
     <main id="contact">
-        <p>If you want or need to contact me you can either do so through one of my social networks, preferably Facebook, or simply use this contact form. Be sure to leave full contact details behind so I can get back to you. I will give my best to respond within 24-48 hours typically.</p>
-        <p class="form-success"><strong>Message successfully sent!</strong></p>
-        <p>If you want to send me another one:</p>
-        <form action="contact_success.html" method="get">
-            <label for="name">Your Name</label><br>
-            <input class="text-input" type="text" id="name" name="name" required><br>
-            <label for="contact">Your Contact Details</label><br>
-            <input class="text-input" type="text" id="contact" name="contact_method" required><br>
-            <label for="message">Your Message</label>
-            <textarea id="message" name="message" required></textarea>
-            <input class="submit" type="submit" value="Contact Me">
+        <div id="contact-text">
+            <p>There are quite a few options to contact me, however I prefer <a class="link" href="https://www.facebook.com/ayareagaming" target="_blank" rel="noopener" aria-label="Visit my Facebook page (opens in a new tab)"><i class="fas fa-external-link-alt"></i> Facebook</a> as well as <a class="link" href="https://discord.gg/Ujwv4Ts" target="_blank" rel="noopener" aria-label="Join my Discord server (opens in a new tab)"><i class="fas fa-external-link-alt"></i> Discord</a> but feel free to use any of the other options.</p>
+            <p>Should you prefer contact via email, feel free to use the form instead. In that case, be sure to leave full contact details (be that an email address, a user handle, etc.) behind so I can get back to you.</p>
+            <p>I will give my best to respond within 24-48 hours generally.</p>
+            <p class="form-success"><strong>Message successfully sent!</strong></p>
+    </div>
+    <form action="contact_success.html" method="get">
+        <label for="name">Your Name</label><br>
+        <input class="form-text" type="text" id="name" name="form_name" required><br>
+        <label for="contact">Your Contact Details</label><br>
+        <input class="form-text" type="text" id="contact" name="form_contact" required><br>
+        <label for="subject">What is your Message about?</label><br>
+        <input class="form-text" type="text" id="form_subject" name="subject" list="subject" required>
+        <datalist id="subject">
+            <option value="Art Comission"></option>
+            <option value="Streaming Related"></option>
+            <option value="Other Business"></option>
+        </datalist>
+        <label for="message">Your Message</label>
+        <textarea class="form-text" id="message" name="form_message" required></textarea>
+        <div class="float-container">
+            <input class="btn btn-reset" type="reset" value="Reset Form">
+            <input class="btn btn-submit" type="submit" value="Contact Me">
+        </div>
     </form>
+    <div class="clear"></div>
     </main>
+    </div>
     <footer>
         <ul class="socials">
             <li>
