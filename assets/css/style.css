@@ -905,6 +905,7 @@ footer {
     main {
         width: min(90%, 60rem);
         margin: 3rem auto 1rem auto;
+        overflow: auto;
     }
 
     main.touch-nav {
@@ -914,16 +915,10 @@ footer {
 
     /* CONTENT > HOME */
 
-    #wrapper {
-        height: 100%;
-        overflow: auto;
-    }
-
     #hero-image {
         background-size: 125%;
         height: 100%;
         display: block;
-        overflow: hidden;
         position:absolute;
         top:0px;
         right:0px;
