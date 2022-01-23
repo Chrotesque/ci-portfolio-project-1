@@ -702,7 +702,8 @@ footer {
         margin: 2rem 4rem 2rem 4rem;
         line-height: 1.5rem;
         position: relative; 
-	    min-height: 99%;
+	    /* min-height: 99%; */
+        padding-bottom: 3rem;
     }
     
     main.touch-nav {
@@ -809,7 +810,7 @@ main#comissions {
         position: sticky;
         top: 0;
         height: 81px;
-        box-shadow: 0 0 10px #25171A;
+        box-shadow: 0 4px 10px rgba(37, 23, 26, 0.5), 0 0 4px rgba(0,0,0, 0.85);
         z-index: 2;
     }
 
@@ -914,7 +915,7 @@ main#comissions {
 
     #wrapper {
         height: 100%;
-        overflow: hidden;
+        overflow: auto;
     }
 
     #hero-image {
@@ -995,6 +996,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 -4px 10px rgba(37, 23, 26, 0.5), 0 0 4px rgba(0,0,0, 0.85);
 }
 
     footer ul {
