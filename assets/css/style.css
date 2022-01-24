@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cardo&family=Josefin+Sans:wght@700&display=swap');
 
-/* GENERAL */
+/* || GENERAL */
 * {
     margin: 0;
     padding: 0;
@@ -92,13 +92,13 @@ header {
     display: block;
 }
 
-/* NAVIGATION */
-/* NAVIGATION > DESKTOP */
+/* || NAVIGATION */
+/* || NAVIGATION > DESKTOP */
 #menu_desktop {
     display: none;
 }
 
-/* NAVIGATION > MOBILE */
+/* || NAVIGATION > MOBILE */
 /* CREDIT: https://codepen.io/alvarotrigo/pen/yLzaPVJ - mobile hamburger menu */
 #menu_mobile {
     /* Safari compatibility */
@@ -231,8 +231,8 @@ i.hamburger {
     font-weight: bold;
 }
 
-/* CONTENT */
-/* CONTENT > GENERAL */
+/* || CONTENT */
+/* || CONTENT > GENERAL */
 #wrapper {
     /* README: existing bugs - any amount is required, thus making it tiny */
     padding-bottom: 0.1px;
@@ -260,7 +260,7 @@ strong {
     font-size: 1.23rem;
 }
 
-/* CONTENT > HOME */
+/* || CONTENT > HOME */
 main#home {
     margin: -10px 0 0 0;
 }
@@ -391,7 +391,7 @@ ul.streaming-times {
 }
 
 
-/* CONTENT > PORTFOLIO */
+/* || CONTENT > PORTFOLIO */
 /* CREDIT: https://github.com/TheLastProject/CSSBox/tree/v1 - lightbox */
 img.thumbnail {
     width: 100% !important;
@@ -457,7 +457,7 @@ figcaption {
     text-align: center;
 }
 
-/* CONTENT > COMISSIONS */
+/* || CONTENT > COMISSIONS */
 main#comissions div {
     width: 100%;
 }
@@ -525,7 +525,7 @@ tr:nth-child(even) {
     margin-left: 10px;
 }
 
-/* CONTENT > ABOUT */
+/* || CONTENT > ABOUT */
 #about-image {
     padding: 0 0 1rem 0;
 }
@@ -540,7 +540,7 @@ p.margin-bottom {
     margin-bottom: 1rem;
 }
 
-/* CONTENT > CONTACT */
+/* || CONTENT > CONTACT */
 main#contact p {
     margin-bottom: 1rem;
 }
@@ -603,13 +603,13 @@ div.clear {
     clear: both;
 }
 
-/* FOOTER */
+/* || FOOTER */
 footer {
     display: none;
 }
 
-/* MEDIA QUERIES */
-/* MEDIA QUERIES > ARTIST TITLE OPTIMIZATION ======================================================== */
+/* || MEDIA QUERIES */
+/* || MEDIA QUERIES > ARTIST TITLE OPTIMIZATION ======================================================== */
 @media (max-width: 359px) {
 
     #artist-abbr {
@@ -621,7 +621,7 @@ footer {
     }
 }
 
-/* MEDIA QUERIES > GALLERY COLUMNS ================================================================== */
+/* || MEDIA QUERIES > GALLERY COLUMNS ================================================================== */
 @media (min-width: 650px) {
 
     main#gallery {
@@ -644,7 +644,7 @@ footer {
     }
 }
 
-/* MEDIA QUERIES > MOBILE NAVIGATION ADJUSTMENTS  =================================================== */
+/* || MEDIA QUERIES > MOBILE NAVIGATION ADJUSTMENTS  =================================================== */
 @media (min-height: 550px) {
 
     #left-socials li {
@@ -670,15 +670,15 @@ footer {
     }
 }
 
-/* MEDIA QUERIES > MOBILE LANDSCAPE ================================================================= */
+/* || MEDIA QUERIES > MOBILE LANDSCAPE ================================================================= */
 @media (max-width: 767px) and (orientation: landscape) {
 
-    /* CONTENT > HOME */
+    /* || CONTENT > HOME */
     #hero-image {
         background-size: 250%;
     }
 
-    /* CONTENT > ABOUT */
+    /* || CONTENT > ABOUT */
     #about-image {
         width: 50%;
         float: right;
@@ -686,7 +686,7 @@ footer {
     }
 }
 
-/* MEDIA QUERIES > HOME CONTENT INDICATOR =========================================================== */
+/* || MEDIA QUERIES > HOME CONTENT INDICATOR =========================================================== */
 @media (min-height: 734px) {
 
     .fa-chevron-down {
@@ -694,10 +694,10 @@ footer {
     }
 }
 
-/* MEDIA QUERIES > PHONE/TABLET ===================================================================== */
+/* || MEDIA QUERIES > PHONE/TABLET ===================================================================== */
 @media (min-width: 768px) {
 
-    /* GENERAL */
+    /* || GENERAL */
     body {
         font-size: 1.1rem;
     }
@@ -710,7 +710,7 @@ footer {
         line-height: 70px;
     }
 
-    /* NAVIGATION */
+    /* || NAVIGATION */
     #menu_mobile {
         height: 75px;
     }
@@ -731,15 +731,15 @@ footer {
         line-height: 46px;
     }
 
-    /* CONTENT */
-    /* CONTENT > GENERAL */
+    /* || CONTENT */
+    /* || CONTENT > GENERAL */
     main {
         margin: 2rem 4rem 2rem 4rem;
         line-height: 1.5rem;
         position: relative;
     }
 
-    /* CONTENT > HOME */
+    /* || CONTENT > HOME */
     main#home {
         margin: -10px 0 0 0;
     }
@@ -748,7 +748,7 @@ footer {
         background-size: 200%;
     }
 
-    /* CONTENT > PORTFOLIO */
+    /* || CONTENT > PORTFOLIO */
     main#gallery div {
         margin-bottom: 1.2em;
     }
@@ -757,7 +757,7 @@ footer {
         font-size: 1.5em;
     }
 
-    /* CONTENT > COMISSIONS */
+    /* || CONTENT > COMISSIONS */
     main#comissions h2 {
         font-size: 1.5em;
         font-weight: bold;
@@ -781,14 +781,14 @@ footer {
         width: 48%;
     }
 
-    /* CONTENT > ABOUT */
+    /* || CONTENT > ABOUT */
     #about-image {
         width: 60%;
         float: right;
         padding: 0 0 2rem 2rem;
     }
 
-    /* CONTENT > CONTACT */
+    /* || CONTENT > CONTACT */
     textarea {
         resize: vertical;
         height: 7em;
@@ -804,10 +804,10 @@ footer {
 
 }
 
-/* MEDIA QUERIES > DESKTOP / LARGE TABLET =========================================================== */
+/* || MEDIA QUERIES > DESKTOP / LARGE TABLET =========================================================== */
 @media (min-width: 1200px) {
 
-    /* GENERAL */
+    /* || GENERAL */
     header {
         position: sticky;
         top: 0;
@@ -843,12 +843,12 @@ footer {
         display: block;
     }
 
-    /* NAVIGATION > MOBILE */
+    /* || NAVIGATION > MOBILE */
     #menu_mobile {
         display: none;
     }
 
-    /* NAVIGATION > DESKTOP */
+    /* || NAVIGATION > DESKTOP */
     #menu_desktop {
         display: initial;
         font-size: 1.5rem;
@@ -892,8 +892,8 @@ footer {
         line-height: 60px;
     }
 
-    /* CONTENT */
-    /* CONTENT > GENERAL */
+    /* || CONTENT */
+    /* || CONTENT > GENERAL */
     #wrapper {
         min-height: 100%;
         padding: 0;
@@ -911,7 +911,7 @@ footer {
         transition: all 0.1s ease-in-out;
     }
 
-    /* CONTENT > HOME */
+    /* || CONTENT > HOME */
     #wrapper.home {
         height: 100%;
         /* to make the home page work with the footer and hero image */
@@ -956,7 +956,7 @@ footer {
         font-size: 2rem;
     }
 
-    /* CONTENT > PORTFOLIO */
+    /* || CONTENT > PORTFOLIO */
     main#gallery div {
         margin-bottom: 1.2em;
     }
@@ -981,14 +981,14 @@ footer {
         transition: all 0.1s ease-in;
     }
 
-    /* CONTENT > COMISSIONS */
+    /* || CONTENT > COMISSIONS */
     main#comissions div:hover h2 {
         color: var(--highlight);
         border-bottom: 4px solid var(--highlight);
         transition: all 0.1s ease-out;
     }
 
-    /* CONTENT > CONTACT */
+    /* || CONTENT > CONTACT */
     .btn {
         font-size: 1.25rem;
     }
@@ -1016,7 +1016,7 @@ footer {
         transition: all 0.1s ease-in-out;
     }
 
-    /* FOOTER */
+    /* || FOOTER */
     /* CREDIT: https://www.youtube.com/watch?v=qlCIXXhSX6Y - footer always on bottom */
     footer {
         background-color: var(--standard-dark);
