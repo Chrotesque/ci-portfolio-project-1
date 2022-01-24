@@ -9,8 +9,8 @@
 
 /* COLOR VARIABLES */
 :root {
-    --highlight: #C8C5E3;
-    --standard-light: #B39CE7;
+    --highlight: #d8d6eb;
+    --standard-light: #997CDF;
     --standard-medium: #432f4e;
     --standard-dark: #25171A;
     --standard-dark-35: rgba(37, 23, 26, 0.35);
@@ -23,6 +23,9 @@
     --gallery-bg: #696490;
     --success: #0f0;
     --success-50: rgba(0,255,0,0.5);
+    --input-missing: #451416;
+    --input-valid: #1f3a16;
+    --input-valid-bg: #241c19;
 
     --white-15: rgba(255, 255, 255, 0.15);
     --black-25: rgba(0,0,0,0.25);
@@ -77,9 +80,11 @@ header {
 #artist-big a,
 #artist-small a {
     text-decoration: none;
+    color: var(--light);
 }
 
 h2#subtitle {
+    color: var(--standard-light);
     display: none;
     position: absolute;
 }
@@ -187,7 +192,7 @@ h2#subtitle {
     list-style: none;
     text-align: center;
     font-size: 2.5rem; 
-    line-height: 4.5rem;
+    line-height: 3.5rem;
 }
 
 #left-socials ul li a,
@@ -213,7 +218,7 @@ h2#subtitle {
     list-style: none;
     text-align: center;
     font-size: 2rem; /* 6vmin */
-    line-height: 4rem;
+    line-height: 3rem;
 }
 
 #right-nav ul li a {
@@ -225,7 +230,7 @@ h2#subtitle {
 }
 
 #right-nav ul li a.active {
-    color: var(--brown);
+    color: var(--standard-dark);
     background-color: var(--link-active);
     font-weight: bold;
 }
@@ -245,13 +250,15 @@ main.touch-nav {
 }
 
 a.link {
-    text-decoration: none;
+    text-decoration: underline;
     color: var(--link-highlight);
+    transition: all 0.3s ease-in-out;
     display: inline-block; /* to ensure that the external icon and subsequent text are not separated by a line break */ 
 }
 
 i.fa-external-link-alt {
     font-size: 0.75em;
+    margin-right: 4px;
 }
 
 /* CONTENT > HOME */
@@ -272,14 +279,14 @@ main#home section {
 .fa-chevron-down {
     position: sticky;
     text-shadow: 0 0 2px #000, 0 0 10px #000, 0 0 30px #000;
-    color: var(--purple-highlight);
+    color: var(--highlight);
 }
 
 .hero-image-text {
     top: 5%;
     font-size: 1.1rem;
     margin-bottom: 2.5rem;
-    background-color: var(--brown-85);
+    background-color: var(--standard-dark-85);
     padding-left: 2rem;
     line-height: 2rem;
     text-align: left;
@@ -311,7 +318,7 @@ main#home section {
 
 main#home h2 {
     font-size: 2em;
-    color: var(--purple-highlight);
+    color: var(--highlight);
 }
 
 a.link-cta {
@@ -322,6 +329,7 @@ a.link-cta {
     text-decoration: none;
     color: var(--standard-dark);
     font-size: 1.5rem;
+    transition: all 0.3s ease-in-out;
 }
 
 #hero-text i {
@@ -404,6 +412,7 @@ main#home ul {
 img.thumbnail {
     width: 100% !important;
     height: auto !important;
+    transition: all 0.3s ease-in;
 }
 
 img.thumbnail {
@@ -430,7 +439,7 @@ span.lightbox {
     left: 0;
     opacity: 0;
     visibility: hidden;
-    transition: visibility 0s, opacity 0.15s linear;
+    transition: visibility 0s, opacity 0.1s linear;
 }
 
 img.full {
@@ -458,7 +467,7 @@ figcaption {
     max-width: 90%;
     text-shadow: 0 0 22px #000, 0 0 4px #000, 0 0 10px #000;
     padding: 10px;
-    color: #C8C5E3;
+    color: var(--highlight);
     text-align: center;
 }
 
@@ -471,12 +480,13 @@ img.thumbnail:focus+span.lightbox {
 
 main#comissions h2 {
     background-color: var(--standard-dark);
-    border-bottom: 4px solid var(--standard-light);
+    border-bottom: 4px solid var(--standard-medium);
     padding: 10px;
     font-size: 1.5em;
     font-weight: bold;
     height: 20px;
     margin-bottom: 20px;
+    transition: all 0.3s ease-out;
 }
 
 main#comissions div {
@@ -554,6 +564,12 @@ tr:nth-child(even) {
 /* CONTENT > ABOUT */
 p.margin-bottom {
     margin-bottom: 20px;
+
+}
+
+main#about, main#gallery {
+    overflow: visible;
+
 }
 
 #about-image {
@@ -587,6 +603,7 @@ main#contact label {
 .form-text {
     width: 100%;
     margin-bottom: 20px;
+    border-bottom: 4px solid var(--standard-medium);
 }
 
 input, textarea {
@@ -597,6 +614,7 @@ input, textarea {
     padding: 10px;
     color: var(--highlight);
     box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
 }
 
 .btn-reset {
@@ -609,6 +627,19 @@ input, textarea {
     width: 50%;
     float: right;
     background-color: var(--link-active);
+}
+
+.btn:hover {
+    background-color: var(--highlight);
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 0 10px var(--highlight);
+}
+
+.link:hover {
+    color: var(--highlight);
+    text-decoration:underline;
+    transition: all 0.1s ease-in-out;
 }
 
 textarea {
@@ -643,7 +674,7 @@ footer {
     }
 }
 
-/* MEDIA QUERIES > HEIGHT NAVIGATION ADJUSTMENTS =========================================================== */
+/* MEDIA QUERIES > MOBILE NAVIGATION ADJUSTMENTS  =================================================== */
 @media (min-height: 550px) {
     #left-socials ul li {
         font-size: 3rem;
@@ -652,7 +683,7 @@ footer {
 
     #right-nav ul li {
         font-size: 2rem; 
-        line-height: 6rem;
+        line-height: 5.5rem;
     }
 }
 
@@ -668,7 +699,7 @@ footer {
     }
 }
 
-/* MEDIA QUERIES > TABLET CHANGES ================================================================= */
+/* MEDIA QUERIES > MOBILE LANDSCAPE ================================================================= */
 @media (max-width: 767px) and (orientation: landscape) {
 
     #hero-image {
@@ -682,7 +713,7 @@ footer {
     }
 }
 
-/* MEDIA QUERIES > TABLET CHANGES ================================================================= */
+/* MEDIA QUERIES > PHONE/TABLET ================================================================= */
 @media (min-width: 768px) {
 
     body {
@@ -720,7 +751,6 @@ footer {
         margin: 2rem 4rem 2rem 4rem;
         line-height: 1.5rem;
         position: relative; 
-        padding-bottom: 3rem;
     }
     
     main.touch-nav {
@@ -777,13 +807,6 @@ footer {
     }
 
     /* CONTENT > CONTACT */
-
-
-    main#contact input:not(:last-child),
-    main#contact textarea {
-        margin-bottom: 30px;
-    }
-
     main#contact textarea {
         resize: vertical;
         height: 7em;
@@ -800,7 +823,7 @@ footer {
 }
 
 /* MEDIA QUERIES > HOME CONTENT INDICATOR ================================================================= */
-@media (min-height: 745px) {
+@media (min-height: 734px) {
 
     /* CONTENT > HOME */
     .fa-chevron-down {
@@ -813,16 +836,24 @@ footer {
 
     /* CONTENT > SHARED */
     main#comissions h2 {
-        top: 99px;
-        padding: 10px;
-        font-size: 1.5em;
+        padding-left: 1rem;
+        font-size: 1.5rem;
         font-weight: bold;
-        height: 48px;
+        height: 3rem;
+        line-height: 3rem;
     }
+
+main#comissions > div:hover h2 {
+    color: var(--highlight);
+    border-bottom: 4px solid var(--standard-light);
+    transition: all 0.1s ease-out;
+}
 
 a.link-cta:hover {
     background-color: var(--highlight);
     color: var(--standard-medium);
+    transition: all 0.1s ease-in-out;
+    box-shadow: 0 0 10px var(--highlight);
 }
 
     header {
@@ -839,7 +870,13 @@ a.link-cta:hover {
         padding-left: 20px;
     }
 
+    #artist-big a {
+        transition: all 0.3s ease-in-out;
+    }
+
     #artist-big a:hover {
+        text-shadow: 0 0 2px var(--highlight);
+        transition: all 0.1s ease-in-out;
         color: var(--highlight);
     }
 
@@ -880,29 +917,31 @@ a.link-cta:hover {
         text-decoration: none;
         color: var(--standard-light);
         height: 100%;
-        line-height: 88px;
+        line-height: 69px;
         text-align: center;
-        vertical-align: middle;
-        transition: all 0.15s ease-out;
-        padding: 0 2vw 0 2vw;
+        transition: all 0.4s ease-out;
+        padding: 4px 2vw 0 2vw;
+        border-bottom: 4px solid transparent;
+        border-top: 4px solid transparent;
     }
 
     #menu_desktop a:hover {
-        color: var(--standard-medium);
-        padding-top: 20px;
-        background-color: var(--highlight);
+        transition: all 0.1s ease-in;
         font-weight: bold;
-        transition: all 0.15s ease-in;
+        color: var(--standard-dark);
+        background-color: var(--highlight);
         box-shadow: 0 0 10px var(--highlight);
+        border-bottom: 4px solid var(--highlight);
+        text-shadow: 0 0 2px var(--standard-dark-85);
     }
 
     #menu_desktop a.active {
-        color: var(--standard-dark);
-        text-shadow: 0 0 2px var(--standard-dark);
-        padding-top: 20px;
-        background-color: var(--link-active);
         font-weight: bold;
+        color: var(--standard-dark);
+        text-shadow: 0 0 2px var(--standard-dark-85);
+        background-color: var(--link-active);
         box-shadow: 0 0 6px var(--link-active);
+        border-bottom: 4px solid var(--link-active);
     }
 
     #menu_desktop li {
@@ -930,6 +969,7 @@ a.link-cta:hover {
         margin: 3rem auto 1rem auto;
         overflow: auto;
         min-height: 100%; 
+        padding-bottom: 3rem;
     }
 
     main.touch-nav {
@@ -999,14 +1039,40 @@ a.link-cta:hover {
     }
 
     img.thumbnail:hover {
-        border: 4px solid var(--link-active);
-        box-shadow: 0 0 10px var(--link-active);
+        border: 4px solid var(--highlight);
+        box-shadow: 0 0 10px var(--highlight);
+        background: var(--highlight);
+        transition: all 0.1s ease-in;
     }
 
     /* CONTENT > CONTACT */
     .btn {
         font-size: 1.25rem;
     }
+
+    .btn:active {
+        color: #f00;
+    }
+
+    .form-text:placeholder-shown {
+        background-color: var(--standard-dark);
+        border-bottom: 4px solid var(--input-missing);
+    }
+    .form-text:not(placeholder-shown) {
+        background-color: var(--input-valid-bg);
+        border-bottom: 4px solid var(--input-valid);
+    }
+
+    .form-text:hover {
+        border-bottom: 4px solid var(--standard-light);
+        transition: all 0.1s ease-in-out;
+    }
+
+    #form-text:active~.test {
+        color: var(--highlight);
+    }
+
+
 
     /* FOOTER */
 
@@ -1015,7 +1081,7 @@ footer {
     width: 100%;
     list-style-type: none;
     position: relative;
-    height: 3rem;
+    height: 48px;
     margin-top: -3rem;
     clear: both;
     display: flex;
@@ -1023,30 +1089,35 @@ footer {
     align-items: center;
     box-shadow: 0 -4px 10px var(--standard-dark-50), 0 0 4px var(--black-85);
 }
-
-    footer ul {
-        text-align: center;   
-    }
-    
     footer li {
         display: inline-block;
-        line-height: 3rem;
     }
     
     footer i {
         font-size: 2rem;
         padding: 0 2rem 0 2rem;
         color: var(--standard-light);
-        vertical-align: middle;
-        line-height: 3rem;
     }
 
     footer a {
         display: inline-block;
+        height: 40px;
+        color: var(--standard-light);
+        transition: all 0.4s ease-out;
+        border-top: 4px solid transparent;
     }
 
-    footer i:hover {
-        color: var(--highlight);
+    footer a:hover {
+        color: var(--standard-dark);
+        background-color: var(--highlight);
+        transition: all 0.1s ease-in;
+        box-shadow: 0 0 10px var(--highlight);
+        text-shadow: 0 0 2px var(--standard-dark-85);
+        border-top: 4px solid var(--highlight);
+    }
+
+    footer a:hover i {
+        color: var(--standard-dark);
     }
 
 }
