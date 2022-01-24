@@ -481,7 +481,7 @@ img.thumbnail:focus+span.lightbox {
 
 main#comissions h2 {
     background-color: var(--standard-dark);
-    border-bottom: 4px solid var(--standard-medium);
+    border-bottom: 4px solid var(--standard-light);
     padding: 10px;
     font-size: 1.5em;
     font-weight: bold;
@@ -846,7 +846,7 @@ footer {
 
 main#comissions > div:hover h2 {
     color: var(--highlight);
-    border-bottom: 4px solid var(--standard-light);
+    border-bottom: 4px solid var(--highlight);
     transition: all 0.1s ease-out;
 }
 
