@@ -83,14 +83,15 @@ h2#subtitle {
 }
 
 /* NAVIGATION */
-/* NAVIGATION > TABLET AND DESKTOP */
+/* NAVIGATION > DESKTOP */
 #menu_desktop {
     display: none;
 }
 
 /* NAVIGATION > MOBILE */
+/* CREDIT: https://codepen.io/alvarotrigo/pen/yLzaPVJ - mobile hamburger menu */
 #menu_mobile {
-    /* Safari */
+    /* Safari compatibility */
     position: -webkit-sticky;
     position: sticky;
     top: 0px;
@@ -116,6 +117,7 @@ h2#subtitle {
 }
 
 #checkbox-toggle:checked~#right-nav {
+    /* README: resolved bugs - moving 1px out of the screen to avoid chromium bug */
     right: -1px !important;
 }
 
@@ -222,6 +224,7 @@ h2#subtitle {
 /* CONTENT */
 /* CONTENT > GENERAL */
 #wrapper {
+    /* README: existing bugs - any amount is required, thus making it tiny */
     padding-bottom: 0.1px;
 }
 
@@ -402,6 +405,7 @@ main#home ul {
 
 
 /* CONTENT > PORTFOLIO */
+/* CREDIT: https://github.com/TheLastProject/CSSBox/tree/v1 - lightbox */
 img.thumbnail {
     width: 100% !important;
     height: auto !important;
@@ -587,7 +591,6 @@ main#contact label {
 
 input,
 textarea {
-    font-family: "Josefin Sans", sans-serif;
     font-size: 1.1rem;
     line-height: 30px;
     background-color: var(--standard-dark);
@@ -908,7 +911,6 @@ footer {
 
     #menu_desktop a:hover {
         transition: all 0.1s ease-in;
-        font-weight: bold;
         color: var(--standard-dark);
         background-color: var(--highlight);
         box-shadow: 0 0 10px var(--highlight);
@@ -917,7 +919,6 @@ footer {
     }
 
     #menu_desktop a.active {
-        font-weight: bold;
         color: var(--standard-dark);
         text-shadow: 0 0 2px var(--standard-dark-85);
         background-color: var(--link-active);
@@ -938,6 +939,7 @@ footer {
 
     #wrapper.home {
         height: 100%;
+        /* to make the home page work with the footer and hero image */
         overflow: hidden;
     }
 
@@ -1033,10 +1035,7 @@ footer {
         font-size: 1.25rem;
     }
 
-    .btn:active {
-        color: #f00;
-    }
-
+    /* 1 space placeholder required on input elements to make this work */
     .form-text:placeholder-shown {
         background-color: var(--standard-dark);
         border-bottom: 4px solid var(--input-missing);
@@ -1052,11 +1051,8 @@ footer {
         transition: all 0.1s ease-in-out;
     }
 
-    #form-text:active~.test {
-        color: var(--highlight);
-    }
-
     /* FOOTER */
+    /* CREDIT: https://www.youtube.com/watch?v=qlCIXXhSX6Y - footer always on bottom */
     footer {
         background-color: var(--standard-dark);
         width: 100%;
