@@ -114,26 +114,28 @@
             </div>
             <form action="contact_success.html" method="get">
                 <div class="form-highlight">
-                    <label for="name">Your Name</label><br>
-                    <input class="user-input" type="text" id="name" name="form_name" placeholder=" " required><br>
+                    <label for="form_name">Your Name</label><br>
+                    <input class="user-input" type="text" id="form_name" name="form_name" placeholder=" " required><br>
                 </div>
                 <div class="form-highlight">
-                    <label for="contact">Your Contact Details</label><br>
-                    <input class="user-input" type="text" id="contact" name="form_contact" placeholder=" " required><br>
+                    <label for="form_contact">Your Contact Details</label><br>
+                    <input class="user-input" type="text" id="form_contact" name="form_contact" placeholder=" "
+                        required><br>
                 </div>
                 <div class="form-highlight">
-                    <label for="subject">What is your Message about?</label><br>
-                    <input class="user-input" type="text" id="form_subject" name="subject" list="subject"
+                    <label for="form_subject">What is your Message about?</label><br>
+                    <input class="user-input" type="text" id="form_subject" name="form_subject" list="data_subject"
                         placeholder=" " required>
-                    <datalist id="subject">
+                    <datalist id="data_subject">
                         <option value="Art Comission"></option>
                         <option value="Streaming Related"></option>
                         <option value="Other Business"></option>
                     </datalist>
                 </div>
                 <div class="form-highlight">
-                    <label for="message">Your Message</label>
-                    <textarea class="user-input" id="message" name="form_message" placeholder=" " required></textarea>
+                    <label for="form_message">Your Message</label>
+                    <textarea class="user-input" id="form_message" name="form_message" placeholder=" "
+                        required></textarea>
                 </div>
                 <div class="form-highlight">
                     <input class="btn btn-reset" type="reset" value="Reset Form">
