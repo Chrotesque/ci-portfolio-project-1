@@ -12,13 +12,13 @@
 <body>
     <div id="wrapper" class="home">
         <header>
-            <h1 id="artist-big">
+            <h1 id="artist-full">
                 <a href="index.html">Joyce Brok</a>
             </h1>
-            <h1 id="artist-small">
+            <h1 id="artist-abbr">
                 <a href="index.html">JB</a>
             </h1>
-            <h2 id="subtitle">Digital Artist & Facebook Streamer</h2>
+            <h2 id="subtitle" class="mobile">Digital Artist & Facebook Streamer</h2>
             <nav id="menu_desktop">
                 <ul>
                     <li>
@@ -39,8 +39,8 @@
         <nav id="menu_mobile">
             <input id="checkbox-toggle" type="checkbox" />
             <label id="toggle-button" for="checkbox-toggle">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-times"></i>
+                <i class="fas fa-bars hamburger"></i>
+                <i class="fas fa-times cross"></i>
             </label>
             <div id="right-nav">
                 <ul>
@@ -96,14 +96,11 @@
                 </ul>
             </div>
         </nav>
-        <main id="home" class="touch-nav">
+        <main id="home">
             <section>
                 <div id="hero-image">
-                    <div id="hero-image-text">
-                        <p class="hero-image-text">Digital Artist & Facebook Streamer</p>
-                        <i class="fas fa-chevron-down"></i>
-                        <i id="preload"></i>
-                    </div>
+                    <i class="fas fa-chevron-down"></i>
+                    <i id="preload"></i>
                 </div>
                 <div id="hero-text">
                     <h2>Welcome!</h2>
@@ -113,7 +110,7 @@
                     <p>I also stream 3 times a week playing various video games and sometimes in VR, as well as
                         occasionally draw on stream.</p>
                     <p>Here is my streaming schedule:
-                        <ul>
+                        <ul class="streaming-times">
                             <li>Tue @ 19:30 CEST - 23:00+ CEST</li>
                             <li>Fri @ 19:30 CEST - 23:00+ CEST</li>
                             <li>Sat @ 19:30 CEST - 23:00+ CEST</li>
@@ -121,7 +118,7 @@
                     </p>
                     <a class="link-cta" href="https://www.facebook.com/ayareagaming" target="_blank" rel="noopener"
                         aria-label="Visit my Facebook page (opens in a new tab)"><i
-                            class="fas fa-external-link-alt"></i> Come hang out on Facebook!</a>
+                            class="fas fa-external-link-alt ext-link-cta"></i> Come hang out on Facebook!</a>
                 </div>
             </section>
         </main>

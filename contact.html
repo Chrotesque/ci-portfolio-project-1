@@ -12,10 +12,10 @@
 <body>
     <div id="wrapper">
         <header>
-            <h1 id="artist-big">
+            <h1 id="artist-full">
                 <a href="index.html">Joyce Brok</a>
             </h1>
-            <h1 id="artist-small">
+            <h1 id="artist-abbr">
                 <a href="index.html">JB</a>
             </h1>
             <h2 id="subtitle">Digital Artist & Facebook Streamer</h2>
@@ -39,8 +39,8 @@
         <nav id="menu_mobile">
             <input id="checkbox-toggle" type="checkbox" />
             <label id="toggle-button" for="checkbox-toggle">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-times"></i>
+                <i class="fas fa-bars hamburger"></i>
+                <i class="fas fa-times cross"></i>
             </label>
             <div id="right-nav">
                 <ul>
@@ -101,10 +101,11 @@
                 <p>There are quite a few options to contact me, however I prefer <a class="link"
                         href="https://www.facebook.com/ayareagaming" target="_blank" rel="noopener"
                         aria-label="Visit my Facebook page (opens in a new tab)"><i
-                            class="fas fa-external-link-alt"></i>Facebook</a> as well as <a class="link"
+                            class="fas fa-external-link-alt ext-link"></i>Facebook</a> as well as <a class="link"
                         href="https://discord.gg/Ujwv4Ts" target="_blank" rel="noopener"
                         aria-label="Join my Discord server (opens in a new tab)"><i
-                            class="fas fa-external-link-alt"></i>Discord</a> but feel free to use any of the other
+                            class="fas fa-external-link-alt ext-link"></i>Discord</a> but feel free to use any of the
+                    other
                     options.</p>
                 <p>Should you prefer contact via email, feel free to use the form instead. In that case, be sure to
                     leave full contact details (be that an email address, a user handle, etc.) behind so I can get back
@@ -114,16 +115,16 @@
             <form action="contact_success.html" method="get">
                 <div class="form-highlight">
                     <label for="name">Your Name</label><br>
-                    <input class="form-text" type="text" id="name" name="form_name" placeholder=" " required><br>
+                    <input class="user-input" type="text" id="name" name="form_name" placeholder=" " required><br>
                 </div>
                 <div class="form-highlight">
                     <label for="contact">Your Contact Details</label><br>
-                    <input class="form-text" type="text" id="contact" name="form_contact" placeholder=" " required><br>
+                    <input class="user-input" type="text" id="contact" name="form_contact" placeholder=" " required><br>
                 </div>
                 <div class="form-highlight">
                     <label for="subject">What is your Message about?</label><br>
-                    <input class="form-text" type="text" id="form_subject" name="subject" list="subject" placeholder=" "
-                        required>
+                    <input class="user-input" type="text" id="form_subject" name="subject" list="subject"
+                        placeholder=" " required>
                     <datalist id="subject">
                         <option value="Art Comission"></option>
                         <option value="Streaming Related"></option>
@@ -132,7 +133,7 @@
                 </div>
                 <div class="form-highlight">
                     <label for="message">Your Message</label>
-                    <textarea class="form-text" id="message" name="form_message" placeholder=" " required></textarea>
+                    <textarea class="user-input" id="message" name="form_message" placeholder=" " required></textarea>
                 </div>
                 <div class="form-highlight">
                     <input class="btn btn-reset" type="reset" value="Reset Form">
