@@ -10,8 +10,8 @@
 /* COLOR VARIABLES */
 :root {
     --highlight: #d8d6eb;
-    --standard-light: #997CDF;
-    --standard-medium: #432f4e;
+    --standard-light: #A68CE3;
+    --standard-medium: #372640;
     --standard-dark: #25171A;
     --standard-dark-35: rgba(37, 23, 26, 0.35);
     --standard-dark-50: rgba(37, 23, 26, 0.5);
@@ -20,7 +20,7 @@
 
     --link-highlight: #CEE002;
     --link-active: #B3BF49;
-    --gallery-bg: #696490;
+    --gallery-bg: #595478;
     --success: #0f0;
     --success-50: rgba(0,255,0,0.5);
     --input-missing: #451416;
@@ -299,7 +299,8 @@ main#home section {
 }
 
 #hero-image {
-    background-image: url("../images/carousel/collage_posters.jpg");
+    background-color: #fff;
+    background-image: url("../images/carousel/collage_postsers.jpg");
     background-repeat: no-repeat;
     background-position: left;
     background-size: 350%;
