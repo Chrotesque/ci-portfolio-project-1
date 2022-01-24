@@ -288,7 +288,6 @@ i#preload {
     box-shadow: 0 5px 4px var(--black-25);
     animation-name: hero-scroll;
     animation-duration: 60s;
-    animation-fill-mode: forward;
     animation-iteration-count: infinite;
     position: relative;
     z-index: -1;
@@ -567,7 +566,7 @@ label {
 
 input,
 textarea {
-    font-family: "Josefin Sans", sans-serif;
+    font-family: inherit;
     font-size: 1.1rem;
     line-height: 30px;
     background-color: var(--standard-dark);
