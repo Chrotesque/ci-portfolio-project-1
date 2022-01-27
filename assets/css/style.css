@@ -187,7 +187,7 @@ i.hamburger {
     left: -100%;
     width: 30%;
     background-color: var(--standard-dark);
-    border-right: 1px solid var(--standard-dark);
+    border-right: 2px solid var(--standard-dark);
     box-shadow: 0 4px 12px #000;
 }
 

@@ -170,19 +170,24 @@ A website meant for the artist as place to showcase her portfolio as well as pro
 
 # Bugs ([^](#table-of-contents))
 ### Existing bugs
+- style.css line 226 - without a padding on the bottom, the content reaches the very edge of the screen. With 0.1px it creates the desired gap to the bottom, giving it a bigger value will just make it bigger which is undesired. Marking it as bug as I don't understand the cause, unlikely a real bug but rather a consequence of my html/css choices:
+    >   #wrapper { padding-bottom: 0.1px; }
+
+
   
 ### Resolved bugs
-- At various stages of the project did I forget about file path differences when referring to a file from within the root folder within an html file vs. from within the assets/css folder within the style.css 
 - Chromium-specific: Upon opening the hamburger menu 2 sides slide in from the left (30% wide) and right (70% wide) respectively, occasionally (what felt like 40-50% of the time) there would be a 1px wide gap between the two sides
     - Workaround:
         1. initially both sides had 
-            > background-color: rgba(37, 23, 26, 0.95)
+            > background-color: var(--standard-dark-95);
         2. changed that to right side specific and gave left side 
-            > background-color: #25171A
+            > background-color: var(--standard-dark);
         3. to mask the gap if it occurs I added to the left side 
-            > border-right: 1px solid #25171A
+            > border-right: 2px solid var(--standard-dark);
         4. without additional changes, having one side partially transparent and one opaque looked odd, added box-shadow to make it work visually
-            > box-shadow: 0 4px 12px rgba(0, 0, 0, 1);
+            > box-shadow: 0 4px 12px #000;
+        5. Another gap then appeared on the right side this time, due to previous fix there's extra margin to work with, thus moving it to the right slightly:
+            > right: -1px !important;
 
 <br>
 
@@ -236,3 +241,5 @@ Once the project has been accessed on Github:
 I'd like to thank:
 - My Mentor Jack Wachira for our concise and helpful feedback sessions
 - My Ex-Colleague and now fellow student [Mycrosys](https://github.com/Mycrosys/) for feedback
+
+https://caniuse.com/?search=var() - 94.27% of all users fully supported
