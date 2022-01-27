@@ -148,7 +148,7 @@ i.hamburger {
 
 #toggle-button {
     position: absolute;
-    top: 8px;
+    top: 7px;
     right: 11px;
     cursor: pointer;
     z-index: 1;
@@ -158,8 +158,8 @@ i.hamburger {
     font-size: 2em;
     display: block;
     background: var(--standard-dark-85);
-    width: 39px;
-    line-height: 38px;
+    width: 42px;
+    line-height: 41px;
     text-align: center;
 }
 
@@ -760,11 +760,15 @@ footer {
         height: 75px;
     }
 
+    #toggle-button {
+        top: 15px;
+    }
+
     #toggle-button i.hamburger {
         font-size: 2em;
         background: var(--standard-dark-85);
-        width: 49px;
-        line-height: 48px;
+        width: 43px;
+        line-height: 42px;
     }
 
     #toggle-button i.cross {
