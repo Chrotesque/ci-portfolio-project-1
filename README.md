@@ -151,7 +151,9 @@ A website meant for the artist as place to showcase her portfolio as well as pro
 
     ### **Color Scheme**
     - The color scheme used evolved throughout the project, however purple being the favourite and signature color of the artist I chose all the other colors using Coolors to work with the main color purple:
-    <img src="assets/images/readme/colors.jpg">
+
+        ![Nav Mobile](assets/images/readme/colors.jpg)
+
         - Primary Colors:
             - #D8D6EB - highlight color for important and interactive elements
             - #A68CE3 - main font color for normal text as well as border-bottom color for various elements as accents
