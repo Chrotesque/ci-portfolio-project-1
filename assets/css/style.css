@@ -29,6 +29,10 @@
     --white-15: rgba(255, 255, 255, 0.15);
     --black-25: rgba(0, 0, 0, 0.25);
     --black-85: rgba(0, 0, 0, 0.85);
+
+    --car-posters: url("../images/carousel/collage_35_posters.jpg");
+    --car-stickers: url("../images/carousel/collage_35_stickers.jpg");
+    --car-paintings: url("../images/carousel/collage_35_paintings.jpg");
 }
 
 html,
@@ -266,7 +270,7 @@ main#home {
 }
 
 i#preload {
-    content: url("../images/carousel/collage_stickers.jpg") url("../images/carousel/collage_paintings.jpg");
+    content: var(--car-stickers) var(--car-paintings);
 }
 
 .fa-chevron-down {
@@ -280,7 +284,7 @@ i#preload {
 #hero-image {
     text-align: center;
     background-color: #fff;
-    background-image: url("../images/carousel/collage_postsers.jpg");
+    background-image: var(--car-posters);
     background-repeat: no-repeat;
     background-position: left;
     background-size: 350%;
@@ -330,61 +334,61 @@ ul.streaming-times {
 
 @keyframes hero-scroll {
     0% {
-        background-image: url("../images/carousel/collage_posters.jpg");
+        background-image: var(--car-posters);
         background-position: left;
     }
 
     12% {
-        background-image: url("../images/carousel/collage_posters.jpg");
+        background-image: var(--car-posters);
     }
 
     16% {
-        background-image: url("../images/carousel/collage_stickers.jpg");
+        background-image: var(--car-stickers);
         background-position: right;
     }
 
     29% {
-        background-image: url("../images/carousel/collage_stickers.jpg");
+        background-image: var(--car-stickers);
     }
 
     33% {
-        background-image: url("../images/carousel/collage_paintings.jpg");
+        background-image: var(--car-paintings);
         background-position: left;
     }
 
     46% {
-        background-image: url("../images/carousel/collage_paintings.jpg");
+        background-image: var(--car-paintings);
     }
 
     50% {
-        background-image: url("../images/carousel/collage_posters.jpg");
+        background-image: var(--car-posters);
         background-position: right;
     }
 
     62% {
-        background-image: url("../images/carousel/collage_posters.jpg");
+        background-image: var(--car-posters);
     }
 
     66% {
-        background-image: url("../images/carousel/collage_stickers.jpg");
+        background-image: var(--car-stickers);
         background-position: left;
     }
 
     79% {
-        background-image: url("../images/carousel/collage_stickers.jpg");
+        background-image: var(--car-stickers);
     }
 
     83% {
-        background-image: url("../images/carousel/collage_paintings.jpg");
+        background-image: var(--car-paintings);
         background-position: right;
     }
 
     96% {
-        background-image: url("../images/carousel/collage_paintings.jpg");
+        background-image: var(--car-paintings);
     }
 
     100% {
-        background-image: url("../images/carousel/collage_posters.jpg");
+        background-image: var(--car-posters);
         background-position: left;
     }
 }
@@ -622,6 +626,16 @@ footer {
 }
 
 /* || MEDIA QUERIES */
+/* || MEDIA QUERIES > HERO IMAGE OPTIMIZATION FOR TINY SCREENS ========================================= */
+@media (max-width: 343px) {
+
+    #hero-image {
+        background-size: 550%;
+    }
+
+}
+
+
 /* || MEDIA QUERIES > ARTIST TITLE OPTIMIZATION ======================================================== */
 @media (max-width: 359px) {
 
@@ -654,6 +668,15 @@ footer {
     main#gallery {
         columns: 5;
         column-gap: 2rem;
+    }
+}
+
+/* || MEDIA QUERIES > HERO IMAGE SIZE SWAPPING  =================================================== */
+@media (min-width: 600px) {
+    :root {
+        --car-posters: url("../images/carousel/collage_50_posters.jpg");
+        --car-stickers: url("../images/carousel/collage_50_stickers.jpg");
+        --car-paintings: url("../images/carousel/collage_50_paintings.jpg");
     }
 }
 
@@ -821,6 +844,12 @@ footer {
 @media (min-width: 1200px) {
 
     /* || GENERAL */
+    :root {
+        --car-posters: url("../images/carousel/collage_100_posters.jpg");
+        --car-stickers: url("../images/carousel/collage_100_stickers.jpg");
+        --car-paintings: url("../images/carousel/collage_100_paintings.jpg");
+    }
+
     header {
         position: sticky;
         top: 0;
