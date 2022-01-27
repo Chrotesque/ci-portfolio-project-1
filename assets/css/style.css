@@ -625,6 +625,17 @@ textarea {
     background-color: var(--link-active);
 }
 
+/* 1 space placeholder required on input elements to make this work */
+.user-input:placeholder-shown {
+    background-color: var(--standard-dark);
+    border-bottom: 4px solid var(--input-missing);
+}
+
+.user-input:not(placeholder-shown) {
+    background-color: var(--input-valid-bg);
+    border-bottom: 4px solid var(--input-valid);
+}
+
 div.clear {
     clear: both;
 }
@@ -1005,11 +1016,12 @@ footer {
     #hero-text {
         text-align: center;
         position: absolute;
-        background-color: var(--black-85);
+        background-color: var(--standard-dark-95);
         right: 0;
         padding: 2rem;
         width: 600px;
         margin: 5rem 5rem;
+        box-shadow: 0 -4px 10px var(--standard-dark-50), 0 0 4px var(--black-85);
     }
 
     main#home h2 {
@@ -1058,17 +1070,6 @@ footer {
         transition: all 0.1s ease-in-out;
         cursor: pointer;
         box-shadow: 0 0 10px var(--highlight);
-    }
-
-    /* 1 space placeholder required on input elements to make this work */
-    .user-input:placeholder-shown {
-        background-color: var(--standard-dark);
-        border-bottom: 4px solid var(--input-missing);
-    }
-
-    .user-input:not(placeholder-shown) {
-        background-color: var(--input-valid-bg);
-        border-bottom: 4px solid var(--input-valid);
     }
 
     .user-input:hover {
