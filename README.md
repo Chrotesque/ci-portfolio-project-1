@@ -10,21 +10,35 @@
 1. [Overview](#overview)
 2. [UX](#ux)
     * [Strategy](#strategy)
+        * [Target Audience](#target-audience)
+        * [Business Goals](#business-goals)
+        * [User Stories](#user-stories)
     * [Scope](#scope)
     * [Structure](#structure)
     * [Skeleton](#skeleton)
+        * [Navigation](#navigation)
+        * [5 Separate Pages](#5-separate-pages)
         * [Wireframes](#wireframes)
     * [Surface](#surface)
+        * [Navigation Design](#navigation-design)
+        * [Color Scheme](#color-scheme)
 3. [Features](#features)
-    * [Current Features](#current-features)
-    * [Future Features](#future-features)
+    * [Responsive Design](#responsive-design)
+    * [Navigation and Footer](#navigation-and-footer)
+    * [Hero Image](#hero-image)
+    * [Portfolio](#portfolio)
+    * [Comissions](#comissions)
+    * [About](#about)
+    * [Contact](#contact)
+    * [General](#general)
 4. [Technologies Used](#technologies-used)
-5. [Testing](#testing)
+5. [Validation and Testing](#validation-and-testing)
 6. [Bugs](#bugs)
-7. [Validation](#validation)
-8. [Deployment](#deployment)
-9. [Credits](#credits)
-10. [Acknowledgements](#acknowledgements)
+    * [Existing Bugs](#existing-bugs)
+    * [Resolved Bugs](#resolved-bugs)
+7. [Deployment](#deployment)
+8. [Credits](#credits)
+9. [Acknowledgements](#acknowledgements)
 
 <br>
 
@@ -139,7 +153,7 @@ A website meant for the artist as place to showcase her portfolio as well as pro
     <br>
 
 * ## **Surface**
-    ### **Navigation**
+    ### **Navigation Design**
     - The top bar contains the artists name on the left side and the navigation to the right
     - The navigation is consistent between desktop and mobile versions in it's behaviour, as it sticks to the top of the page to always be available.
         - On mobile it uses a standard hamburger menu to reduce space. The hamburger menu then offers all social links as well as internal navigation links. 
@@ -172,7 +186,7 @@ A website meant for the artist as place to showcase her portfolio as well as pro
 <br>
 
 # Features ([^](#table-of-contents))
-## Fully Responsive
+## Responsive Design
 - Generally speaking the website is optimized for 3 sizes: < 768px, 768px to 1200px and 1200px >, these are the break points at which elements see a greater change; based off of [statcounter](statcounter.com) 
     - 360x640 is the smallest mobile screen that is used by the majority of users
     - 768x1024 is by far the most common tablet screen size
@@ -184,34 +198,34 @@ A website meant for the artist as place to showcase her portfolio as well as pro
 ## Navigation and Footer
 - On mobile, the navigation consists of the hamburger style icon and once opened, the menu consists of internal navigation on the right and the footer (social links) on the left - this allows the visitor access to all relevant links at any given point with a single tap, no scrolling required:
 
-    ![Nav Mobile](assets/images/readme/feature_mobile_nav.jpg)
+    ![Nav Mobile](assets/images/readme/features/mobile_nav.jpg)
 
-    ![Nav Full](assets/images/readme/feature_mobile_nav_full.jpg)
+    ![Nav Full](assets/images/readme/features/mobile_nav_full.jpg)
 
 - On desktop, the style changes to a full navigation and a footer at the bottom of the content with the social links, on the dekstop version the title becomes the home button, which is common on websites these days - the social links are not as quickly accessible as they are on mobile, however a single button press on keyboard will typically get the user to the bottom of the page if required. In addition to that, having social links in the footer is also common practice:
 
-    ![Nav Desktop](assets/images/readme/feature_desktop_nav.jpg)
-    ![Nav Footer](assets/images/readme/feature_desktop_footer.jpg)
+    ![Nav Desktop](assets/images/readme/features/desktop_nav.jpg)
+    ![Nav Footer](assets/images/readme/features/desktop_footer.jpg)
 
-## Hero Image / Index
+## Hero Image
 - The index is a landing page, showcasing select pieces from the portfolio in the background while giving all necessary info as to what the page is about - this gives the visitor a broad range of artwork from the artist right away:
 
-    ![Nav Desktop](assets/images/readme/feature_desktop_version.jpg)
+    ![Nav Desktop](assets/images/readme/features/desktop_version.jpg)
 
 - On mobile I decided to have the hero image at the top, if enough text content on the bottom is visible, if the device is not wide enough the name reverts to initials:
 
-    ![Nav Desktop](assets/images/readme/feature_mobile_version.jpg)
-    ![Nav Desktop](assets/images/readme/feature_mobile_version_xs.jpg)
+    ![Nav Desktop](assets/images/readme/features/mobile_version.jpg)
+    ![Nav Desktop](assets/images/readme/features/mobile_version_xs.jpg)
 
 - If not enough text content is visible, a down arrow / chevron icon is being displayed to convey that there's more further down:
 
-    ![Nav Desktop](assets/images/readme/feature_mobile_chevron.jpg)
+    ![Nav Desktop](assets/images/readme/features/mobile_chevron.jpg)
 
 ## Portfolio
 - The portfolio shows a selection of images made by the artist in a simple tile pattern & each picture can be focused on via tap/click and then also displays the title of the picture:
 
-    ![Nav Desktop](assets/images/readme/feature_portfolio.jpg)
-    ![Nav Desktop](assets/images/readme/feature_lightbox.jpg)  
+    ![Nav Desktop](assets/images/readme/features/portfolio.jpg)
+    ![Nav Desktop](assets/images/readme/features/lightbox.jpg)  
 
 
 ## Comissions
@@ -223,31 +237,33 @@ A website meant for the artist as place to showcase her portfolio as well as pro
 ## Contact
 - The form on the contact page consists of 4 input fields, it uses css to subtly suggest what fields still require information (on the left) and since all fields are required to be filled in, the browser will otherwise be less subtle (on the right): 
 
-    ![Nav Desktop](assets/images/readme/feature_form_subtle.jpg)
-    ![Nav Desktop](assets/images/readme/feature_form_notsubtle.jpg)
+    ![Nav Desktop](assets/images/readme/features/form_subtle.jpg)
+    ![Nav Desktop](assets/images/readme/features/form_notsubtle.jpg)
+
+- I decided against any kind of validation on those input fields, for the name field a full name is rarely required, contact details might be an email address, might be a social media handle, etc.
 
 - Once sent, the page will display another version of the contact form with a success message, while allowing the user to sent another message (just in case):
 
-    ![Nav Desktop](assets/images/readme/feature_form_sent.jpg)
+    ![Nav Desktop](assets/images/readme/features/form_sent.jpg)
 
 ## General
-- There is a variety of links referring to sub pages internally to guide the visitor from one section to another, depending on the location - these are purely text based. External text links on the other hand are always marked with an icon to avoid any confusion as to where they are leading:
+- There is a variety of links referring to pages internally to guide the visitor from one section to another, depending on the location - these are purely text based. External text links on the other hand are always marked with an icon to avoid any confusion as to where they are leading:
 
-    ![Nav Desktop](assets/images/readme/feature_link_external.jpg)
+    ![Nav Desktop](assets/images/readme/features/link_external.jpg)
 
 - I use hover effects on the desktop version for the visitor to signal active elements and to help on page navigation; where I deemed it functionally necessary on the portfolio as well as navigation it also complies with a11y accessibility contrast requirements:
 
-    ![Nav Desktop](assets/images/readme/feature_hover1.jpg)
+    ![Nav Desktop](assets/images/readme/features/hover1.jpg)
 
-    ![Nav Desktop](assets/images/readme/feature_hover2.jpg)
+    ![Nav Desktop](assets/images/readme/features/hover2.jpg)
 
-    ![Nav Desktop](assets/images/readme/feature_hover5.jpg)
+    ![Nav Desktop](assets/images/readme/features/hover5.jpg)
 
-    ![Nav Desktop](assets/images/readme/feature_hover3.jpg)
+    ![Nav Desktop](assets/images/readme/features/hover3.jpg)
 
-    ![Nav Desktop](assets/images/readme/feature_hover6.jpg)
+    ![Nav Desktop](assets/images/readme/features/hover6.jpg)
     
-    ![Nav Desktop](assets/images/readme/feature_hover4.jpg)
+    ![Nav Desktop](assets/images/readme/features/hover4.jpg)
 
 <br>
 
@@ -270,8 +286,71 @@ A website meant for the artist as place to showcase her portfolio as well as pro
 
 <br>
 
-# Testing ([^](#table-of-contents))
-## TBD
+# Validation and Testing ([^](#table-of-contents))
+## Validation
+
+All testing and validating was done with the final version of the website hosted on Github Pages.
+
+* [W3C Markup Validation Service](https://validator.w3.org/) (all internal pages tested individually)
+    > Document checking completed. No errors or warnings to show.
+* [W3c CSS Validation Service](https://jigsaw.w3.org/css-validator/)
+    > Congratulations! No Error Found.
+* [a11y Color Contrast Accessibility Validator](https://color.a11y.com/)
+    > Congratulations! No automated color contrast issues found on the webpage tested
+
+    In addition to the automated testing, I've also used the manual color-pair test to double check all possible conflicts on all pages that might not be caught by the automated testing.
+
+## Testing
+The website was extensively tested using Chrome DevTools, in addition to that I've also used the following to verify proper functionality and experienced ***no*** problems:
+- Samsung Galaxy S10E Mobile Phone & Samsung Galaxy Tab S6 Lite Tablet, both were used in Portrait and Landscape mode to test using:
+    - Brave
+    - Google Chrome
+- Windows 10 Desktop Machine
+    - Brave
+    - Google Chrome
+    - Microsoft Edge
+    - Mozilla Firefox
+
+<br>
+
+Testing with Internet Explorer reveals that the website is not being displayed correctly to the point of not working at all. According to [https://gs.statcounter.com/browser-market-share](statcounter) 0.46% of users are still using Internet Explorer, which is why I didn't invest any time in optimizing for it. 
+Similarily it also doesn't work with Samsung Internet, which reaches 2.85%.  
+I personally don't have a machine capable of running Safari nor do I know anyone who does, so I couldn't test that.
+
+<br>
+
+All internal and external links were tested on functionality.
+
+<br>
+
+## Google DevTools Lighthouse
+* Home page (Desktop/Mobile)
+
+    ![Index Desktop](assets/images/readme/validation/index_desktop.jpg)
+    ![Index Mobile](assets/images/readme/validation/index_mobile.jpg)
+
+    The size of the background pictures used automatically mean that it's harder on mobile devices, in addition to that the fact that I'm using a background image instead of the img tag itself in the HTML document means I can't use next gen formats with a fallback for non supporting browsers.
+
+* Portfolio 
+
+    ![Portfolio Desktop](assets/images/readme/validation/portfolio_desktop.jpg)
+    ![Portfolio Mobile](assets/images/readme/validation/portfolio_mobile.jpg)
+
+    Seemingly really hard to optimize with the Lightbox code that I've used as that makes it impossible to use next-gen formats, the picture tag wouldn't work with the code `img.thumbnail:focus+.lightbox` in addition to the column model used to display them, which means the order of pictures displayed first makes the use of lazy loading impossible. Tests with lazy loading decreased the performance even further. I've spent countless hours optimizing the pictures as much as possible, using Photoshop to reduce the overall dimensions as well as save them intially to then have them optmized further using the tinypng service. 
+
+* Comissions 
+
+    ![Comissions Desktop](assets/images/readme/validation/comissions_desktop.jpg)
+    ![Comissions Mobile](assets/images/readme/validation/comissions_mobile.jpg)
+
+* About 
+
+    ![About Desktop](assets/images/readme/validation/about_desktop.jpg)
+    ![About Mobile](assets/images/readme/validation/about_mobile.jpg)
+
+* Contact (both version are identical)
+
+    ![Contact Desktop](assets/images/readme/validation/contact_both.jpg)
 
 <br>
 
@@ -295,11 +374,6 @@ A website meant for the artist as place to showcase her portfolio as well as pro
             > box-shadow: 0 4px 12px #000;
         5. Another gap then appeared on the right side this time, due to previous fix there's extra margin to work with, thus moving it to the right slightly:
             > right: -1px !important;
-
-<br>
-
-# Validation ([^](#table-of-contents))
-## TBD
 
 <br>
 
@@ -348,5 +422,3 @@ Once the project has been accessed on Github:
 I'd like to thank:
 - My Mentor Jack Wachira for our concise and helpful feedback sessions
 - My Ex-Colleague and now fellow student [Mycrosys](https://github.com/Mycrosys/) for feedback
-
-https://caniuse.com/?search=var() - 94.27% of all users fully supported
