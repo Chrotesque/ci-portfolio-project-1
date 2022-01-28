@@ -1073,7 +1073,16 @@ footer {
     }
 
     .user-input:hover {
-        border-bottom: 4px solid var(--standard-light);
+        border-bottom: 4px solid var(--highlight);
+        transition: all 0.1s ease-in-out;
+    }
+
+    label {
+        transition: all 0.3s ease-in-out;
+    }
+
+    label:hover {
+        color: var(--highlight);
         transition: all 0.1s ease-in-out;
     }
 
