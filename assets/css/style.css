@@ -974,7 +974,7 @@ footer {
         width: min(90%, 60rem);
         margin: 3rem auto 1rem auto;
         min-height: 100%;
-        padding-bottom: 3rem;
+        padding-bottom: 5rem;
     }
 
     .link:hover {
