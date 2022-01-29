@@ -98,13 +98,13 @@ header {
 
 /* || NAVIGATION */
 /* || NAVIGATION > DESKTOP */
-#menu_desktop {
+#menu-desktop {
     display: none;
 }
 
 /* || NAVIGATION > MOBILE */
 /* CREDIT: https://codepen.io/alvarotrigo/pen/yLzaPVJ - mobile hamburger menu */
-#menu_mobile {
+#menu-mobile {
     /* Safari compatibility */
     position: -webkit-sticky;
     position: sticky;
@@ -767,7 +767,7 @@ footer {
     }
 
     /* || NAVIGATION */
-    #menu_mobile {
+    #menu-mobile {
         height: 75px;
     }
 
@@ -915,25 +915,25 @@ footer {
     }
 
     /* || NAVIGATION > MOBILE */
-    #menu_mobile {
+    #menu-mobile {
         display: none;
     }
 
     /* || NAVIGATION > DESKTOP */
-    #menu_desktop {
+    #menu-desktop {
         display: initial;
         font-size: 1.5rem;
         height: 100%;
         float: right;
     }
 
-    #menu_desktop li {
+    #menu-desktop li {
         list-style-type: none;
         float: left;
         display: block;
     }
 
-    #menu_desktop a {
+    #menu-desktop a {
         display: inline-block;
         text-decoration: none;
         color: var(--standard-light);
@@ -944,7 +944,7 @@ footer {
         padding: 4px 2vw 0 2vw;
     }
 
-    #menu_desktop a:hover {
+    #menu-desktop a:hover {
         transition: all 0.1s ease-in;
         color: var(--standard-dark);
         background-color: var(--highlight);
@@ -952,14 +952,14 @@ footer {
         text-shadow: 0 0 2px var(--standard-dark-85);
     }
 
-    #menu_desktop a.active {
+    #menu-desktop a.active {
         color: var(--standard-dark);
         text-shadow: 0 0 2px var(--standard-dark-85);
         background-color: var(--link-active);
         box-shadow: 0 0 6px var(--link-active);
     }
 
-    #menu_desktop li {
+    #menu-desktop li {
         line-height: 60px;
     }
 
