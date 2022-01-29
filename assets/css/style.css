@@ -237,12 +237,8 @@ i.hamburger {
 
 /* || CONTENT */
 /* || CONTENT > GENERAL */
-#wrapper {
-    /* README: existing bugs - any amount is required, thus making it tiny */
-    padding-bottom: 0.1px;
-}
-
 main {
+    display: inline-block;
     overflow: visible;
     margin: 1rem 1.5rem 1rem 1.5rem;
 }
@@ -975,6 +971,7 @@ footer {
         margin: 3rem auto 1rem auto;
         min-height: 100%;
         padding-bottom: 5rem;
+        display: block;
     }
 
     .link:hover {
