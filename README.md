@@ -1,7 +1,7 @@
-# **Milestone Project 1 - Joyce Brok - WIP**
+# **Milestone Project 1 - Joyce Brok**
 ## Portfolio Website for a Digital Artist - [View deployed site here.](https://chrotesque.github.io/ci-portfolio-project-1/)
 
-<img src="assets/images/readme/amiresponsive.jpg">
+![AmIResponsive](assets/images/readme/amiresponsive.jpg)
 
 <br>
 
@@ -33,12 +33,16 @@
     * [General](#general)
 4. [Technologies Used](#technologies-used)
 5. [Validation and Testing](#validation-and-testing)
+    * [Validation](#validation)
+    * [Testing](#testing)
+    * [Google Lighthouse](#google-devtools-lighthouse)
+    * [User Story Testing](#user-story-testing)
 6. [Bugs](#bugs)
-    * [Existing Bugs](#existing-bugs)
     * [Resolved Bugs](#resolved-bugs)
 7. [Deployment](#deployment)
 8. [Credits](#credits)
-9. [Acknowledgements](#acknowledgements)
+9. [Statistics](#statistics)
+10. [Acknowledgements](#acknowledgements)
 
 <br>
 
@@ -52,7 +56,7 @@ A website meant for the artist as place to showcase her portfolio as well as pro
 
 * ## **Strategy**
     ### **Target Audience**
-    The target audience of this website are people that are looking to have affordable custom made artwork for various purposes.
+    The target audience of this website are people that are looking to have affordable custom made artwork for various purposes, so far the range includes posters, logos, stickers, tattoos, portraits and various others. Once contact has been established, the website will be less useful, thus the main focus is on first time visitors as subsequent contact will take place off the website and new additions to the portfolio won't matter to existing customers, only to new ones. 
 
     ### **Business Goals**
     - Acquiring new clients to grow in reach ultimately
@@ -87,6 +91,7 @@ A website meant for the artist as place to showcase her portfolio as well as pro
 
 * ## **Structure**
     - The contents are segmented into clearly separated logical sections
+    - The navigation lists content in the order of importance with one big exception: about before contact - contact being the last menu point seems to be a agreed upon standard that is prevalent on most websites; if it was truly about importance then it would change to Portfolio > Comissions > Contact > About
     - The purpose of the website is briefly explained on the landing / home page, first direct mention of streaming activities by giving out streaming schedule
     - The portfolio to show visitors a broad range of the artists work to help with the decision of purchasing art
     - The comissions page is required to offer information about pricing and if the product meets the visitors needs (DPI, file format, file size, etc.)
@@ -147,8 +152,7 @@ A website meant for the artist as place to showcase her portfolio as well as pro
 
     #### **Limitations**
     - The final implementation of a carousel was born out of the frustration of not understanding keyframes from online examples, it was meant as placeholder and "good enough"-implementation until the very end when I would then decide to either finish the project or leave it be. It turned out better than anticipated and replaced the original carousel 
-    - The lightbox feature used seemingly does not allow the use of the picture element, thus making it impossible to offer webp format for browsers that support it, specifically this line seems problematic:
-        > img.thumbnail:focus+.lightbox 
+    - The lightbox feature used seemingly does not allow the use of the picture element, thus making it impossible to offer webp format for browsers that support it, specifically this line would simply not work:  `img.thumbnail:focus+.lightbox`
 
     <br>
 
@@ -164,30 +168,30 @@ A website meant for the artist as place to showcase her portfolio as well as pro
         - The landing / index page features a full screen scrolling hero image while all other pages use a "boxed-in" model, the idea here being that the page is about an artist and thus it should take center stage, also I feel it looks much better than using the same box-model for the hero image as well
 
     ### **Color Scheme**
-    - The color scheme used evolved throughout the project, however purple being the favourite and signature color of the artist I chose all the other colors using Coolors to work with the main color purple:
+    - The color scheme used evolved throughout the project, however purple being the favourite and signature color of the artist I chose all the other colors using [Coolors](#technologies-used) to work with the main color purple:
 
         ![Nav Mobile](assets/images/readme/colors.jpg)
 
         - Primary Colors:
-            - #D8D6EB - highlight color for important and interactive elements
-            - #A68CE3 - main font color for normal text as well as border-bottom color for various elements as accents
-            - #372640 - body background color
-            - #25171A - background color for elements further in the front, like the top bar, footer, etc. also used for fonts that are being highlighted to contrast the highlight color; also being used in various different opacities for transparency to create more subtle effects
-            - #CEE002 - color for text links, complementary color to varioous shades of blue/purple
-            - #B3BF49 - similar but lower impact shade of the text link color, used for navigation elements as background to signify the active page
-            - #595478 - deeper shade of purple used on the gallery for images that have transparent backgrounds
+            - `#D8D6EB` - highlight color for important and interactive elements
+            - `#A68CE3` - main font color for normal text as well as border-bottom color for various elements as accents
+            - `#372640` - body background color
+            - `#25171A` - background color for elements further in the front, like the top bar, footer, etc. also used for fonts that are being highlighted to contrast the highlight color; also being used in various different opacities for transparency to create more subtle effects
+            - `#CEE002` - color for text links, complementary color to varioous shades of blue/purple
+            - `#B3BF49` - similar but lower impact shade of the text link color, used for navigation elements as background to signify the active page
+            - `#595478` - deeper shade of purple used on the gallery for images that have transparent backgrounds
         - Secondary Colors:
-            - #00ff00 - pure green used to display the success message on the contact page, including a 50% alpha version as text shadow
-            - #451416 - similar to other elements on the website, the input fields also have border-bottom accents to signify in this case specifically whether or not a field has been filled out or not, in this case meaning the field is still empty
-            - #1f3a16 - similar to above, this signifies a filled out field
-            - #241c19 - this is the respective background color for the border-bottom accent color mentioned above
-            - shades of white and black for shadows
+            - `#00ff00` - pure green used to display the success message on the contact page, including a 50% alpha version as text shadow
+            - `#451416` - similar to other elements on the website, the input fields also have border-bottom accents to signify in this case specifically whether or not a field has been filled out or not, in this case meaning the field is still empty
+            - `#1f3a16` - similar to above, this signifies a filled out field
+            - `#241c19` - this is the respective background color for the border-bottom accent color mentioned above
+            - `shades `of white and black for shadows
 
 <br>
 
 # Features ([^](#table-of-contents))
 ## Responsive Design
-- Generally speaking the website is optimized for 3 sizes: < 768px, 768px to 1200px and 1200px >, these are the break points at which elements see a greater change; based off of [statcounter](statcounter.com) 
+- Generally speaking the website is optimized for 3 sizes: < 768px, 768px to 1200px and 1200px >, these are the break points at which elements see a greater change; based off of [statcounter](#technologies-used)
     - 360x640 is the smallest mobile screen that is used by the majority of users
     - 768x1024 is by far the most common tablet screen size
     - 1920x1080 is the most common desktop screen size to this date, with only roughly 2% even reaching 2560x1440 
@@ -200,32 +204,39 @@ A website meant for the artist as place to showcase her portfolio as well as pro
 
     ![Nav Mobile](assets/images/readme/features/mobile_nav.jpg)
 
-    ![Nav Full](assets/images/readme/features/mobile_nav_full.jpg)
+    ![Nav Mobile Full](assets/images/readme/features/mobile_nav_full.jpg)
 
 - On desktop, the style changes to a full navigation and a footer at the bottom of the content with the social links, on the dekstop version the title becomes the home button, which is common on websites these days - the social links are not as quickly accessible as they are on mobile, however a single button press on keyboard will typically get the user to the bottom of the page if required. In addition to that, having social links in the footer is also common practice:
 
     ![Nav Desktop](assets/images/readme/features/desktop_nav.jpg)
     ![Nav Footer](assets/images/readme/features/desktop_footer.jpg)
 
+    Consistency is broken here in regards to links being generally of a green color, however it simply looked odd and felt wrong to force consistency upon the navigation coming from the way I handle links and the submit button on the website.
+
 ## Hero Image
 - The index is a landing page, showcasing select pieces from the portfolio in the background while giving all necessary info as to what the page is about - this gives the visitor a broad range of artwork from the artist right away:
 
-    ![Nav Desktop](assets/images/readme/features/desktop_version.jpg)
+    ![Desktop Version](assets/images/readme/features/desktop_version.jpg)
 
 - On mobile I decided to have the hero image at the top, if enough text content on the bottom is visible, if the device is not wide enough the name reverts to initials:
 
-    ![Nav Desktop](assets/images/readme/features/mobile_version.jpg)
-    ![Nav Desktop](assets/images/readme/features/mobile_version_xs.jpg)
+    ![Mobile Title](assets/images/readme/features/mobile_version.jpg)
+    ![Mobile Title XS](assets/images/readme/features/mobile_version_xs.jpg)
+
+    Consistency is broken with the subtitle right underneath on mobile only, due to possible size constraints depending on the device being used and the user most likely seeing the landing page first, the subtitle is invisible on all other sub pages to maximize usable screen estate:
+
+    ![Subtitle Visible](assets/images/readme/features/subtitle_visible.jpg)
+    ![Subtitle Invisible](assets/images/readme/features/subtitle_invisible.jpg)
 
 - If not enough text content is visible, a down arrow / chevron icon is being displayed to convey that there's more further down:
 
-    ![Nav Desktop](assets/images/readme/features/mobile_chevron.jpg)
+    ![Chevron](assets/images/readme/features/mobile_chevron.jpg)
 
 ## Portfolio
 - The portfolio shows a selection of images made by the artist in a simple tile pattern & each picture can be focused on via tap/click and then also displays the title of the picture:
 
-    ![Nav Desktop](assets/images/readme/features/portfolio.jpg)
-    ![Nav Desktop](assets/images/readme/features/lightbox.jpg)  
+    ![Portfolio](assets/images/readme/features/portfolio.jpg)
+    ![Portfolio Title Lightbox](assets/images/readme/features/lightbox.jpg)  
 
 
 ## Comissions
@@ -237,33 +248,37 @@ A website meant for the artist as place to showcase her portfolio as well as pro
 ## Contact
 - The form on the contact page consists of 4 input fields, it uses css to subtly suggest what fields still require information (on the left) and since all fields are required to be filled in, the browser will otherwise be less subtle (on the right): 
 
-    ![Nav Desktop](assets/images/readme/features/form_subtle.jpg)
-    ![Nav Desktop](assets/images/readme/features/form_notsubtle.jpg)
+    ![Form Warning Subtle](assets/images/readme/features/form_subtle.jpg)
+    ![Form Warning Obvious](assets/images/readme/features/form_notsubtle.jpg)
 
-- I decided against any kind of validation on those input fields, for the name field a full name is rarely required, contact details might be an email address, might be a social media handle, etc.
+    Consistency is broken when it comes to the buttons, as they feature different styles. The idea here is to emphasize on the submit "Contact Me"-button, making the reset button less intrusive, *especially since it will wipe all user inputs without warning*.
+
+- I decided against any kind of validation on those input fields; a real name was never required for any interaction the artist had with previous clients and sometimes a handle is all that is known, similarily contact details might be an email address, a social media handle, etc.
+
+- The subject input field "What is your Message about?" is a combination of an input field and select tag, making it possible to offer a few typically selected useful subject lines while also giving the user the option to just type whatever they want. It's not a perfect solution as once a prewritten subject line has been selected it's not entirely clear how to get back to the full selection. Since it still allows the user to type in custom text, I decided to stich with this solution.
 
 - Once sent, the page will display another version of the contact form with a success message, while allowing the user to sent another message (just in case):
 
-    ![Nav Desktop](assets/images/readme/features/form_sent.jpg)
+    ![Form Sent](assets/images/readme/features/form_sent.jpg)
 
 ## General
 - There is a variety of links referring to pages internally to guide the visitor from one section to another, depending on the location - these are purely text based. External text links on the other hand are always marked with an icon to avoid any confusion as to where they are leading:
 
-    ![Nav Desktop](assets/images/readme/features/link_external.jpg)
+    ![External Links](assets/images/readme/features/link_external.jpg)
 
-- I use hover effects on the desktop version for the visitor to signal active elements and to help on page navigation; where I deemed it functionally necessary on the portfolio as well as navigation it also complies with a11y accessibility contrast requirements:
+- I use hover effects on the desktop version for the visitor to highlight interactive elements, provide feedback and to help on page navigation; where I deemed it functionally necessary on the portfolio as well as navigation it also complies with accessibility contrast requirements:
 
-    ![Nav Desktop](assets/images/readme/features/hover1.jpg)
+    ![Hover Gallery](assets/images/readme/features/hover_gallery.jpg)
 
-    ![Nav Desktop](assets/images/readme/features/hover2.jpg)
+    ![Hover Desktop Navigation](assets/images/readme/features/hover_desktopnav.jpg)
 
-    ![Nav Desktop](assets/images/readme/features/hover5.jpg)
+    ![Hover Form Button](assets/images/readme/features/hover_formbtn.jpg)
 
-    ![Nav Desktop](assets/images/readme/features/hover3.jpg)
+    ![Hover Comissions H2](assets/images/readme/features/hover_comissionsh2.jpg)
 
-    ![Nav Desktop](assets/images/readme/features/hover6.jpg)
+    ![Hover Link](assets/images/readme/features/hover_link.jpg)
     
-    ![Nav Desktop](assets/images/readme/features/hover4.jpg)
+    ![Hover Form Input](assets/images/readme/features/hover_forminput.jpg)
 
 <br>
 
@@ -313,7 +328,7 @@ The website was extensively tested using Chrome DevTools, in addition to that I'
 
 <br>
 
-Testing with Internet Explorer reveals that the website is not being displayed correctly to the point of not working at all. According to [https://gs.statcounter.com/browser-market-share](statcounter) 0.46% of users are still using Internet Explorer, which is why I didn't invest any time in optimizing for it. 
+Testing with Internet Explorer reveals that the website is not being displayed correctly to the point of not working at all. According to [statcounter](#technologies-used) 0.46% of users are still using Internet Explorer, which is why I didn't invest any time in optimizing for it. 
 Similarily it also doesn't work with Samsung Internet, which reaches 2.85%.  
 I personally don't have a machine capable of running Safari nor do I know anyone who does, so I couldn't test that.
 
@@ -336,7 +351,7 @@ All internal and external links were tested on functionality.
     ![Portfolio Desktop](assets/images/readme/validation/portfolio_desktop.jpg)
     ![Portfolio Mobile](assets/images/readme/validation/portfolio_mobile.jpg)
 
-    Seemingly really hard to optimize with the Lightbox code that I've used as that makes it impossible to use next-gen formats, the picture tag wouldn't work with the code `img.thumbnail:focus+.lightbox` in addition to the column model used to display them, which means the order of pictures displayed first makes the use of lazy loading impossible. Tests with lazy loading decreased the performance even further. I've spent countless hours optimizing the pictures as much as possible, using Photoshop to reduce the overall dimensions as well as save them intially to then have them optmized further using the tinypng service. 
+    Seemingly really hard to optimize with the Lightbox code that I've used as that makes it impossible to use next-gen formats, the picture tag wouldn't work with the code `img.thumbnail:focus+.lightbox` in addition to the column model used to display them, which means the order of pictures displayed first makes the use of lazy loading impossible. Tests with lazy loading decreased the performance even further. I've spent countless hours optimizing the pictures as much as possible, using [Photoshop](#technologies-used) to reduce the overall dimensions as well as save them intially to then have them optmized further using the tinypng service. 
 
 * Comissions 
 
@@ -350,30 +365,58 @@ All internal and external links were tested on functionality.
 
 * Contact (both version are identical)
 
-    ![Contact Desktop](assets/images/readme/validation/contact_both.jpg)
+    ![Contact Both](assets/images/readme/validation/contact_both.jpg)
+
+<br>
+
+## User Story Testing
+
+-   First Time Visitor Goals (Visitor stumbles upon the website)
+    1. As a first time visitor, I want to quickly understand the purpose of the website
+        > The landing page greets the visitor with a collage of portfolio pieces and a text box with a quick introduction and invitation towards the most important parts of the website
+    2. As a first time visitor, I want to find the portfolio of the artist
+        > The portfolio can easily be found through the navigation on desktop as well as navigation on mobile through the very common hamburger icon on the top right
+    3. As a first time visitor, I want to be able to quickly navigate the sites different sections on any device I happen to use at the time
+        > The navigation previously is available at all times at the top of the page, no matter on what page the visitor is on nor how far down he/she scrolled  
+
+-   Redirected First Time Visitor Goals (Visitor has an idea what the website is about)
+    1. As a first time visitor, I want to find the portfolio of the artist
+        > See above
+    2. As a first time visitor, I want to find to find information about pricing, commission process as well as contact details 
+        > Similar to the portfolio, both comission and contact pages are easily identified and always accessible
+
+-   Returning Visitor Goals
+    1. As a returning visitor, I want to be able to review the comission process in case contact is temporarily interrupted (schedules, sleeping rhythms, etc.)
+        > See above
+    2. As a returning visitor, I want to be able to find contact information in case it has been lost
+        > See above
 
 <br>
 
 # Bugs ([^](#table-of-contents))
-### Existing bugs
-- style.css line 226 - without a padding on the bottom, the content reaches the very edge of the screen. With 0.1px it creates the desired gap to the bottom, giving it a bigger value will just make it bigger which is undesired. Marking it as bug as I don't understand the cause, unlikely a real bug but rather a consequence of my html/css choices:
-    >   #wrapper { padding-bottom: 0.1px; }
-
-
-  
 ### Resolved bugs
-- Chromium-specific: Upon opening the hamburger menu 2 sides slide in from the left (30% wide) and right (70% wide) respectively, occasionally (what felt like 40-50% of the time) there would be a 1px wide gap between the two sides
-    - Workaround:
-        1. initially both sides had 
-            > background-color: var(--standard-dark-95);
-        2. changed that to right side specific and gave left side 
-            > background-color: var(--standard-dark);
-        3. to mask the gap if it occurs I added to the left side 
-            > border-right: 2px solid var(--standard-dark);
-        4. without additional changes, having one side partially transparent and one opaque looked odd, added box-shadow to make it work visually
-            > box-shadow: 0 4px 12px #000;
-        5. Another gap then appeared on the right side this time, due to previous fix there's extra margin to work with, thus moving it to the right slightly:
-            > right: -1px !important;
+- Chromium-specific: Upon opening the hamburger menu 2 sides slide in from the left (30% wide) and right (70% wide) respectively, occasionally (what felt like 40-50% of the time) there would be a 1px wide gap between the two sides, my workaround:
+    1. initially both sides had: `background-color: var(--standard-dark-95);`
+    2. changed that to right side specific and gave left side: `background-color: var(--standard-dark);`
+    3. to mask the gap if it occurs I added to the left side: `border-right: 2px solid var(--standard-dark);`
+    4. without additional changes, having one side partially transparent and one opaque looked odd, added box-shadow to make it work visually: `box-shadow: 0 4px 12px #000;`
+    5. Another gap then appeared on the right side this time, due to previous fix there's extra margin to work with, thus moving it to the right slightly: `right: -1px !important;`
+    
+    <br>
+
+- Chromium-specific: the mobile version of the website would have the issue that content reaches the very bottom edge of the screen, despite the `main` (the content container) having a `margin` of 1rem for the bottom. Possible solutions:
+    1. use `padding: 1rem 1.5rem 1rem 1.5rem` instead of `margin: 1rem 1.5rem 1rem 1.5rem` on `main#about`
+    2. use `padding-bottom` of as little as 0.1px on `#wrapper`
+    3. add `display: inline-block` to the `main` element and switching it to `display: block` for the 1200px media query
+
+    <br>
+
+    I stumbled upon the 2nd "solution" by accident and stuck with it, as it was technically working. What was confusing about it is the fact, that there is an inexplicable "jump" in gap size going from 1px to 0px, definitely not just 1 pixel in height. Going from 1px to 2px would increase the existing gap by 1px as expected but going from 1px to 0 would eliminate the gap entirely, which is 16px (used screenshots as reference in [Photoshop](#technologies-used)) or 1rem, meaning `padding-bottom` of 0.1px on `#wrapper` would then "enable" the `margin` mentioned above. My initial conclusion:
+    > "Marking it as bug as I don't understand the cause, unlikely a real bug but rather a consequence of my html/css choices"
+    
+    seems to hold true.  
+
+    This did not occur on Firefox in the same manner. A friend had a look at my code and was determined to figure this out and suggested solution #3, which is what I adopted, as initial testing revealed that solution #1 would seemingly require a lot of code changes.
 
 <br>
 
@@ -418,7 +461,14 @@ Once the project has been accessed on Github:
 
 <br>
 
+# Statistics ([^](#table-of-contents))
+Before using [Wakatime](#technologies-used) I've manually tracked the time using the time tracking feature on [Clickup](#technologies-used), on which I reached 33h 11m. According to [Wakatime](#technologies-used) I've spent 51h 20m on this project. In total that would mean **83h 31m** in total in regards to the coding.  
+This does not include image conversions, resizing and research obviously. 
+
+<br>
+
 # Acknowledgements ([^](#table-of-contents))
 I'd like to thank:
 - My Mentor Jack Wachira for our concise and helpful feedback sessions
 - My Ex-Colleague and now fellow student [Mycrosys](https://github.com/Mycrosys/) for feedback
+- My friend and epilation expert Superpara for the solution on the 2nd resolved bug
