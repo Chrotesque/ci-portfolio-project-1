@@ -1,5 +1,5 @@
 # **Milestone Project 1 - Joyce Brok**
-## Portfolio Website for a Digital Artist - [View deployed site here.](https://chrotesque.github.io/ci-portfolio-project-1/)
+## Portfolio Website for a Digital Artist - <a href="https://chrotesque.github.io/ci-portfolio-project-1/" target="_blank">View deployed site here.</a>
 
 ![AmIResponsive](assets/images/readme/amiresponsive.jpg)
 
@@ -283,21 +283,24 @@ A website meant for the artist as place to showcase her portfolio as well as pro
 <br>
 
 # Technologies Used ([^](#table-of-contents))
-- Main languages: [HTML5](https://en.wikipedia.org/wiki/HTML5) & [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
-- [Google Fonts](https://fonts.google.com/) used for fonts throughout the whole site
-- [Font Awesome](https://fontawesome.com/) used for a few select icons to be able to style them as font/text
-- [Git](https://git-scm.com/) used for version control through the Gitpod terminal for deployment onto Github
-- [GitHub](https://github.com/) used as host and for deployment of the site
-- [Gitpod](http://gitpod.com) used as IDE
-- [ClickUp](http://clickup.com) used for project management and to track time used on the project
-- [WakaTime](https://wakatime.com) used as time tracking replacement for ClickUp towards the end of the project as per recommendation of my mentor due to it's automated nature
-- [Adobe Photoshop 2021](https://www.adobe.com/products/photoshop.html) used for image optimization, saving files in WEBP format as well as creating the collage images used on the front page of this project
-- [TinyPNG](https://tinypng.com/) used to optimize JPG and PNG file sizes for this project
-- [Lettercounter](https://lettercounter.github.io/) used to keep commit messages below or at 50 characters
-- [Am I Responsive?](http://ami.responsivedesign.is/) used to create responsive preview of the site used at the top of this readme
-- [Coolors](https://coolors.co/) used to create a color palette for this project
-- [Balsamiq](https://balsamiq.com/) used to create the wireframes during the initial design stage
-- [Statcounter](https://gs.statcounter.com/screen-resolution-stats) used as resource to optimize website for various commonly used resolutions as a priority
+- Main languages: <a href="https://en.wikipedia.org/wiki/HTML5" target="_blank">HTML5</a> & <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets" target="_blank">CSS3</a>
+- <a href="https://fonts.google.com/" target="_blank">Google Fonts</a> used for fonts throughout the whole site
+- <a href="https://fontawesome.com/" target="_blank">Font Awesome</a> used for a few select icons to be able to style them as font/text
+- <a href="https://git-scm.com/" target="_blank">Git</a> used for version control through the Gitpod terminal for deployment onto Github
+- <a href="https://github.com/" target="_blank">GitHub</a> used as host and for deployment of the site
+- <a href="http://gitpod.com" target="_blank">Gitpod</a> used as IDE
+- <a href="https://validator.w3.org/" target="_blank">W3C Markup Validation Service</a> used to validate HTML code
+- <a href="https://jigsaw.w3.org/css-validator/" target="_blank">W3c CSS Validation Service</a> used to validate CSS code
+- <a href="https://color.a11y.com/" target="_blank">a11y Color Contrast Accessibility Validator</a> used to validate contrast accessibility
+- <a href="http://clickup.com" target="_blank">ClickUp</a> used for project management and to track time used on the project
+- <a href="https://wakatime.com" target="_blank">WakaTime</a> used as time tracking replacement for ClickUp towards the end of the project as per recommendation of my mentor due to it's automated nature
+- <a href="https://www.adobe.com/products/photoshop.html" target="_blank">Adobe Photoshop 2021</a> used for image optimization, saving files in WEBP format as well as creating the collage images used on the front page of this project
+- <a href="https://tinypng.com/" target="_blank">TinyPNG</a> used to optimize JPG and PNG file sizes for this project
+- <a href="https://lettercounter.github.io/" target="_blank">Lettercounter</a> used to keep commit messages below or at 50 characters
+- <a href="http://ami.responsivedesign.is/" target="_blank">Am I Responsive?</a> used to create responsive preview of the site used at the top of this readme
+- <a href="https://coolors.co/" target="_blank">Coolors</a> used to create a color palette for this project
+- <a href="https://balsamiq.com/" target="_blank">Balsamiq</a> used to create the wireframes during the initial design stage
+- <a href="https://gs.statcounter.com/screen-resolution-stats" target="_blank">Statcounter</a> used as resource to optimize website for various commonly used resolutions as a priority
 
 <br>
 
@@ -306,11 +309,11 @@ A website meant for the artist as place to showcase her portfolio as well as pro
 
 All testing and validating was done with the final version of the website hosted on Github Pages.
 
-* [W3C Markup Validation Service](https://validator.w3.org/) (all internal pages tested individually)
+* [W3C Markup Validation Service](#technologies-used-) (all internal pages tested individually)
     > Document checking completed. No errors or warnings to show.
-* [W3c CSS Validation Service](https://jigsaw.w3.org/css-validator/)
+* [W3c CSS Validation Service](#technologies-used-)
     > Congratulations! No Error Found.
-* [a11y Color Contrast Accessibility Validator](https://color.a11y.com/)
+* [a11y Color Contrast Accessibility Validator](#technologies-used-)
     > Congratulations! No automated color contrast issues found on the webpage tested
 
     In addition to the automated testing, I've also used the manual color-pair test to double check all possible conflicts on all pages that might not be caught by the automated testing.
@@ -422,8 +425,8 @@ All internal and external links were tested on functionality.
 
 # Deployment ([^](#table-of-contents))
 This project was developed using Gitpod through which it was committed and pushed to the repository on Github as host:
-1. Visit [http://github.com](http://github.com) and login
-2. Navigate to the respective [repository](https://github.com/Chrotesque/ci-portfolio-project-1)
+1. Visit <a href="https://github.com/" target="_blank">GitHub</a> and login
+2. Open the <a href="https://github.com/Chrotesque/ci-portfolio-project-1" target="_blank">respository</a>
 
 ## Github pages
 Github pages were used to deploy the project as follows:
@@ -452,12 +455,12 @@ Once the project has been accessed on Github:
 - The color palette was created by the developer himself, with some limited input from Joyce Brok for some final touches
 
 ## Code
-- Hamburger menu was based off of [this Codepen example](https://codepen.io/alvarotrigo/pen/yLzaPVJ), modifications were made to better fit this project  
-- Lightbox used in the Portfolio is [CSSBox](https://github.com/TheLastProject/CSSBox), specifically the simplified [v1 Branch version](https://github.com/TheLastProject/CSSBox/tree/v1), modifications were made to better fit this project
-- In order to always have the footer at the bottom of a page regardless of content length (necessary for about & contact) I followed a [video tutorial from Dani Krossing](https://www.youtube.com/watch?v=qlCIXXhSX6Y)
+- Hamburger menu was based off of <a href="https://codepen.io/alvarotrigo/pen/yLzaPVJ" target="_blank">this Codepen example</a>, modifications were made to better fit this project  
+- Lightbox used in the Portfolio is [CSSBox](https://github.com/TheLastProject/CSSBox), specifically the simplified <a href="https://github.com/TheLastProject/CSSBox/tree/v1" target="_blank">v1 Branch version</a>, modifications were made to better fit this project
+- In order to always have the footer at the bottom of a page regardless of content length (necessary for about & contact) I followed a <a href="https://www.youtube.com/watch?v=qlCIXXhSX6Y" target="_blank">video tutorial from Dani Krossing</a>
 
 ## Readme
-- I took inspiration from the Table of Contents used in [Github User's taybro23 project](https://github.com/taybro23/AboveBoard_MS4), as well as more general inspiration (and guidance) from [AJGreaves](https://github.com/AJGreaves/portrait-artist) and [the SampleReadme from CI](https://github.com/code-institute-solutions/samplereadme).
+- I took inspiration from the Table of Contents used in <a href="https://github.com/taybro23/AboveBoard_MS4" target="_blank">Github User's taybro23 project</a>, as well as more general inspiration (and guidance) from <a href="https://github.com/AJGreaves/portrait-artist" target="_blank">AJGreaves</a> and <a href="https://github.com/code-institute-solutions/samplereadme" target="_blank">the SampleReadme from CI</a>.
 
 <br>
 
@@ -470,5 +473,5 @@ This does not include image conversions, resizing and research.
 # Acknowledgements ([^](#table-of-contents))
 I'd like to thank:
 - My Mentor Jack Wachira for our concise and helpful feedback sessions
-- My Ex-Colleague and now fellow student [Mycrosys](https://github.com/Mycrosys/) for feedback
+- My Ex-Colleague and now fellow student <a href="https://github.com/Mycrosys/" target="_blank">Mycrosys</a> for feedback
 - My friend and epilation expert Superpara for the solution on the 2nd resolved bug
