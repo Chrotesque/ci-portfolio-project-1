@@ -7,8 +7,8 @@
 
 # Table of Contents
 
-1. [Overview](#overview)
-2. [UX](#ux)
+1. [Overview](#overview-)
+2. [UX](#ux-)
     * [Strategy](#strategy)
         * [Target Audience](#target-audience)
         * [Business Goals](#business-goals)
@@ -22,7 +22,7 @@
     * [Surface](#surface)
         * [Navigation Design](#navigation-design)
         * [Color Scheme](#color-scheme)
-3. [Features](#features)
+3. [Features](#features-)
     * [Responsive Design](#responsive-design)
     * [Navigation and Footer](#navigation-and-footer)
     * [Hero Image](#hero-image)
@@ -31,18 +31,18 @@
     * [About](#about)
     * [Contact](#contact)
     * [General](#general)
-4. [Technologies Used](#technologies-used)
-5. [Validation and Testing](#validation-and-testing)
+4. [Technologies Used](#technologies-used-)
+5. [Validation and Testing](#validation-and-testing-)
     * [Validation](#validation)
     * [Testing](#testing)
     * [Google Lighthouse](#google-devtools-lighthouse)
     * [User Story Testing](#user-story-testing)
-6. [Bugs](#bugs)
+6. [Bugs](#bugs-)
     * [Resolved Bugs](#resolved-bugs)
-7. [Deployment](#deployment)
-8. [Credits](#credits)
-9. [Statistics](#statistics)
-10. [Acknowledgements](#acknowledgements)
+7. [Deployment](#deployment-)
+8. [Credits](#credits-)
+9. [Statistics](#statistics-)
+10. [Acknowledgements](#acknowledgements-)
 
 <br>
 
@@ -168,7 +168,7 @@ A website meant for the artist as place to showcase her portfolio as well as pro
         - The landing / index page features a full screen scrolling hero image while all other pages use a "boxed-in" model, the idea here being that the page is about an artist and thus it should take center stage, also I feel it looks much better than using the same box-model for the hero image as well
 
     ### **Color Scheme**
-    - The color scheme used evolved throughout the project, however purple being the favourite and signature color of the artist I chose all the other colors using [Coolors](#technologies-used) to work with the main color purple:
+    - The color scheme used evolved throughout the project, however purple being the favourite and signature color of the artist I chose all the other colors using [Coolors](#technologies-used-) to work with the main color purple:
 
         ![Nav Mobile](assets/images/readme/colors.jpg)
 
@@ -191,7 +191,7 @@ A website meant for the artist as place to showcase her portfolio as well as pro
 
 # Features ([^](#table-of-contents))
 ## Responsive Design
-- Generally speaking the website is optimized for 3 sizes: < 768px, 768px to 1200px and 1200px >, these are the break points at which elements see a greater change; based off of [statcounter](#technologies-used)
+- Generally speaking the website is optimized for 3 sizes: < 768px, 768px to 1200px and 1200px >, these are the break points at which elements see a greater change; based off of [statcounter](#technologies-used-)
     - 360x640 is the smallest mobile screen that is used by the majority of users
     - 768x1024 is by far the most common tablet screen size
     - 1920x1080 is the most common desktop screen size to this date, with only roughly 2% even reaching 2560x1440 
@@ -328,7 +328,7 @@ The website was extensively tested using Chrome DevTools, in addition to that I'
 
 <br>
 
-Testing with Internet Explorer reveals that the website is not being displayed correctly to the point of not working at all. According to [statcounter](#technologies-used) 0.46% of users are still using Internet Explorer, which is why I didn't invest any time in optimizing for it. 
+Testing with Internet Explorer reveals that the website is not being displayed correctly to the point of not working at all. According to [statcounter](#technologies-used-) 0.46% of users are still using Internet Explorer, which is why I didn't invest any time in optimizing for it. 
 Similarily it also doesn't work with Samsung Internet, which reaches 2.85%.  
 I personally don't have a machine capable of running Safari nor do I know anyone who does, so I couldn't test that.
 
@@ -351,7 +351,7 @@ All internal and external links were tested on functionality.
     ![Portfolio Desktop](assets/images/readme/validation/portfolio_desktop.jpg)
     ![Portfolio Mobile](assets/images/readme/validation/portfolio_mobile.jpg)
 
-    Seemingly really hard to optimize with the Lightbox code that I've used as that makes it impossible to use next-gen formats, the picture tag wouldn't work with the code `img.thumbnail:focus+.lightbox` in addition to the column model used to display them, which means the order of pictures displayed first makes the use of lazy loading impossible. Tests with lazy loading decreased the performance even further. I've spent countless hours optimizing the pictures as much as possible, using [Photoshop](#technologies-used) to reduce the overall dimensions as well as save them intially to then have them optmized further using the tinypng service. 
+    Seemingly really hard to optimize with the Lightbox code that I've used as that makes it impossible to use next-gen formats, the picture tag wouldn't work with the code `img.thumbnail:focus+.lightbox` in addition to the column model used to display them, which means the order of pictures displayed first makes the use of lazy loading impossible. Tests with lazy loading decreased the performance even further. I've spent countless hours optimizing the pictures as much as possible, using [Photoshop](#technologies-used-) to reduce the overall dimensions as well as save them intially to then have them optmized further using the tinypng service. 
 
 * Comissions 
 
@@ -411,7 +411,7 @@ All internal and external links were tested on functionality.
 
     <br>
 
-    I stumbled upon the 2nd "solution" by accident and stuck with it, as it was technically working. What was confusing about it is the fact, that there is an inexplicable "jump" in gap size going from 1px to 0px, definitely not just 1 pixel in height. Going from 1px to 2px would increase the existing gap by 1px as expected but going from 1px to 0 would eliminate the gap entirely, which is 16px (used screenshots as reference in [Photoshop](#technologies-used)) or 1rem, meaning `padding-bottom` of 0.1px on `#wrapper` would then "enable" the `margin` mentioned above. My initial conclusion:
+    I stumbled upon the 2nd "solution" by accident and stuck with it, as it was technically working. What was confusing about it is the fact, that there is an inexplicable "jump" in gap size going from 1px to 0px, definitely not just 1 pixel in height. Going from 1px to 2px would increase the existing gap by 1px as expected but going from 1px to 0 would eliminate the gap entirely, which is 16px (used screenshots as reference in [Photoshop](#technologies-used-)) or 1rem, meaning `padding-bottom` of 0.1px on `#wrapper` would then "enable" the `margin` mentioned above. My initial conclusion:
     > "Marking it as bug as I don't understand the cause, unlikely a real bug but rather a consequence of my html/css choices"
     
     seems to hold true.  
@@ -462,8 +462,8 @@ Once the project has been accessed on Github:
 <br>
 
 # Statistics ([^](#table-of-contents))
-Before using [Wakatime](#technologies-used) I've manually tracked the time using the time tracking feature on [Clickup](#technologies-used), on which I reached 33h 11m. According to [Wakatime](#technologies-used) I've spent 51h 20m on this project. In total that would mean **83h 31m** in total in regards to the coding.  
-This does not include image conversions, resizing and research obviously. 
+Before using [Wakatime](#technologies-used-) I've manually tracked the time using the time tracking feature on [Clickup](#technologies-used-), on which I reached 33h 11m. According to [Wakatime](#technologies-used-) I've spent 53h 51m on this project. In total that would mean **87h 2m** in total in regards to the coding.  
+This does not include image conversions, resizing and research. 
 
 <br>
 
